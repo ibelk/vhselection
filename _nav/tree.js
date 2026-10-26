@@ -9,5 +9,11 @@ window.NAV_TREE = [
     pages: [
       { title: "Головна", path: "index.html" }
     ]
+  },
+  {
+    branch: "Ресерч",
+    pages: [
+      { title: "Дослідження", path: "research/research.html" }
+    ]
   }
 ];

@@ -27,6 +27,8 @@ VH Selection (також згадувана як V&H Selection) — міжнар
 
 Для них компанія є джерелом перевірених виробників.
 
+Висновки ресерчу — у `research/research.md`.
+
 ## Репозиторій
 
 - **Репо:** https://github.com/ibelk/vhselection
