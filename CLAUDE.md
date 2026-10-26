@@ -29,8 +29,8 @@ VH Selection (також згадувана як V&H Selection) — міжнар
 
 ## Репозиторій
 
-- **Репо:** <TBD після деплою>
-- **GitHub Pages:** <TBD після деплою>
+- **Репо:** https://github.com/ibelk/vhselection
+- **GitHub Pages:** https://ibelk.github.io/vhselection/
 
 ## Навігатор
 
