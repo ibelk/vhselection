@@ -17,13 +17,13 @@ SEO, соцмережі, виставки, прес-згадки, email) і **щ
 
 | Компанія | Блог/контент-хаб | Соцмережі (з футера/хедера сайту) | Виставки на сайті | Прес/нагороди | Email/newsletter |
 |---|---|---|---|---|---|
-| **Winexport Management** | Є — `/en/blog` у хедері й футері *(WebFetch winexport-management.com)* | Facebook, Instagram (лише ці два; LinkedIn і YouTube відсутні) *(WebFetch winexport-management.com)* | Окрема сторінка "Trade Fairs" у хедері й футері (`/en/trade-fairs`), але конкретні виставки (ProWein, Vinexpo) не названо *(WebFetch winexport-management.com)* | Немає | Немає |
+| **Winexport Management** | Є — `/en/blog` у хедері й футері *(WebFetch winexport-management.com; скріншот winexport-management-blog.jpg)* | Facebook, Instagram (лише ці два; LinkedIn і YouTube відсутні) *(WebFetch winexport-management.com; скріншот winexport-management-footer.jpg)* | Окрема сторінка "Trade Fairs" у хедері й футері (`/en/trade-fairs`), але конкретні виставки (ProWein, Vinexpo) не названо *(WebFetch winexport-management.com; скріншот winexport-management-footer.jpg)* | Немає | Немає |
 | **Les Grands Vins & Co** | Немає | Лише LinkedIn, і лише один лінк у секції Contact — немає іконок у хедері/футері *(WebFetch lesgrandsvins.co)* | Загальна фраза про "trade show participation" і "professional international events", конкретних виставок не названо *(WebFetch lesgrandsvins.co)* | Немає | Немає |
 | **Cellar 33** | Є розділ "News" (`/news/`), окремого блогу з освітнім контентом не виявлено *(WebFetch cellar-33.com)* | Facebook, Instagram, LinkedIn — іконки у футері *(WebFetch cellar-33.com)* | Немає | Немає назв нагород; "award-winning sommelier" у команді — без назви нагороди *(WebFetch cellar-33.com)* | Немає |
-| **Business France Marketplace** | Немає окремого блогу; є блок "News" на головній із 3 новинами (Ambition Africa 2024, спортивний сектор, Paris 2024) *(WebFetch marketplace.businessfrance.fr)* | Twitter, Instagram, LinkedIn — у футері під "Follow us on"; Facebook і YouTube відсутні *(WebFetch marketplace.businessfrance.fr)* | Лінк "See our upcoming tradeshows" на сторінку Events; Ambition Africa названо "6th edition" *(WebFetch marketplace.businessfrance.fr)* | Немає назв преси/нагород; є кількісні факти ("10,000+ clients in 2023", "1,400+ experts", "55+ countries") як форма соціального доказу *(WebFetch marketplace.businessfrance.fr)* | Немає |
-| **Toptal** | Повноцінний контент-хаб: `/blog`, окремі продукти Toptal Creator (`/creator`) і Toptal Resume (`/resume`), тематичні інсайт-статті *(WebFetch toptal.com)* | LinkedIn, X, Facebook, Instagram — у футері *(WebFetch toptal.com)* | Не застосовується (не виставкова ніша) | **Найсильніше з усіх**: Newsweek ranking (виділено окремою секцією над футером), Forbes-стаття (05.08.2026), відеосвідчення з атрибуцією CNBC *(WebFetch toptal.com)* | Немає |
-| **MAC Wine Services** *(додатково, ХАРД)* | Є — "Insights" у навігації, `/champagne-insights/`, у футері підписано "Insights Blog" *(WebFetch macwineservices.com)* | Facebook, Instagram, LinkedIn — іконки в хедері й футері *(WebFetch macwineservices.com)* | Немає | Немає | Немає |
-| **MH Wines** *(додатково, ХАРД)* | Немає блогу; є FAQ ("Customer service") | Facebook, LinkedIn, Instagram з прямими URL; X згадано текстом без видимого лінку *(WebFetch mhwines.nl)* | **Найконкретніше з усіх конкурентів**: у відгуку Napa Valley Vintners прямо названо "the past two ProWein trade fairs" (2022 і 2023), з деталізацією "over a thousand importers each year" *(WebFetch mhwines.nl)* | Немає назв преси/нагород; показаний Google-рейтинг "5 / 5" | **Єдиний конкурент із видимою формою підписки**: блок "Subscribe to our newsletter!" з email-полем, чекбоксом згоди і кнопкою "Sign up" *(WebFetch mhwines.nl)* |
+| **Business France Marketplace** | Немає окремого блогу; є блок "News" на головній із 3 новинами (Ambition Africa 2024, спортивний сектор, Paris 2024) *(WebFetch marketplace.businessfrance.fr)* | Twitter, Instagram, LinkedIn — у футері під "Follow us on"; Facebook і YouTube відсутні *(WebFetch marketplace.businessfrance.fr; скріншот business-france-perevireni.jpg)* | Лінк "See our upcoming tradeshows" на сторінку Events; Ambition Africa названо "6th edition" *(WebFetch marketplace.businessfrance.fr)* | Немає назв преси/нагород; є кількісні факти ("10,000+ clients in 2023", "1,400+ experts", "55+ countries") як форма соціального доказу *(WebFetch marketplace.businessfrance.fr; скріншот business-france-perevireni.jpg)* | Немає |
+| **Toptal** | Повноцінний контент-хаб: `/blog`, окремі продукти Toptal Creator (`/creator`) і Toptal Resume (`/resume`), тематичні інсайт-статті *(WebFetch toptal.com)* | LinkedIn, X, Facebook, Instagram — у футері *(WebFetch toptal.com)* | Не застосовується (не виставкова ніша) | **Найсильніше з усіх**: Newsweek ranking (виділено окремою секцією над футером), Forbes-стаття (05.08.2026), відеосвідчення з атрибуцією CNBC *(WebFetch toptal.com; скріншот toptal-perevireni.jpg)* | Немає |
+| **MAC Wine Services** *(додатково, ХАРД)* | Є — "Insights" у навігації, `/champagne-insights/`, у футері підписано "Insights Blog" *(WebFetch macwineservices.com; скріншот mac-wine-services-insights.jpg)* | Facebook, Instagram, LinkedIn — іконки в хедері й футері *(WebFetch macwineservices.com; скріншот mac-wine-services-footer.jpg)* | Немає | Немає | Немає |
+| **MH Wines** *(додатково, ХАРД)* | Немає блогу; є FAQ ("Customer service") | Facebook, LinkedIn, Instagram з прямими URL; X згадано текстом без видимого лінку *(WebFetch mhwines.nl)* | **Найконкретніше з усіх конкурентів**: у відгуку Napa Valley Vintners прямо названо "the past two ProWein trade fairs" (2022 і 2023), з деталізацією "over a thousand importers each year" *(WebFetch mhwines.nl; скріншот mh-wines-testimonials.jpg)* | Немає назв преси/нагород; показаний Google-рейтинг "5 / 5" | **Єдиний конкурент із видимою формою підписки**: блок "Subscribe to our newsletter!" з email-полем, чекбоксом згоди і кнопкою "Sign up" *(WebFetch mhwines.nl; скріншот mh-wines-newsletter.jpg)* |
 
 Дані не підтверджені: meta description для Les Grands Vins & Co,
 Cellar 33, Business France Marketplace і Toptal не видимі у
@@ -40,19 +40,20 @@ conversation" (теж → /en/contact) → показ 18 господарств 
 "See all 37 estates" як доказ масштабу → сторінка Contact з email,
 телефоном і трьома офісами. Форми заявки прямо на головній немає,
 логін-муру немає, testimonials/named-client кейсів немає, ціни не
-показано *(WebFetch winexport-management.com)*. Примітка: email у
-футері (fabricosta60@winexportmanagement.it) на іншому домені, ніж
-сам сайт (winexport-management.com) — дрібна нестиковка довіри, яку
-варто уникнути у VH Selection.
+показано *(WebFetch winexport-management.com; скріншот
+winexport-management-footer.jpg)*. Примітка: email у футері
+(fabricosta60@winexportmanagement.it) на іншому домені, ніж сам сайт
+(winexport-management.com) — дрібна нестиковка довіри, яку варто
+уникнути у VH Selection.
 
 **Les Grands Vins & Co.** Найглибше кваліфікований funnel з усіх
 п'яти: "Get in touch" → форма Contact, яка **одразу запитує роль
 відвідувача** (Producer/Winery, Importer/Distributor, Other) ще
 перед повідомленням, разом з ім'ям/прізвищем/email *(WebFetch
-lesgrandsvins.co)*. Це єдиний приклад multi-step qualification у
-формі (не окремий крок-візард, а одне додаткове поле-перемикач перед
-текстовим повідомленням). Testimonials немає, ціни немає, логін-муру
-немає.
+lesgrandsvins.co; скріншот les-grands-vins-contact-form.jpg)*. Це
+єдиний приклад multi-step qualification у формі (не окремий
+крок-візард, а одне додаткове поле-перемикач перед текстовим
+повідомленням). Testimonials немає, ціни немає, логін-муру немає.
 
 **Cellar 33.** Funnel найменш структурований із п'яти: хіро з кнопкою
 "Discover ↓" веде просто на якірний скрол по сторінці, а не на
@@ -64,14 +65,16 @@ cellar-33.com)*. Testimonials і ціни відсутні.
 кроком є створення облікового запису**, а не контактна форма:
 "Create an account" → вибір профілю (buyer/seller) → окремі шляхи
 "Create a buyer account" / "Register as a French supplier"
-*(WebFetch marketplace.businessfrance.fr)*. Це і є той самий "труднощі
-заходу" реєстрації, зафіксований у 04-matrix.md як "доступ обмежений"
-— тепер підтверджено конкретним кроком. Водночас на сторінці присутні
+*(WebFetch marketplace.businessfrance.fr; скріншот
+business-france-signup.jpg)*. Це і є той самий "труднощі заходу"
+реєстрації, зафіксований у 04-matrix.md як "доступ обмежений" —
+тепер підтверджено конкретним кроком. Водночас на сторінці присутні
 **названі кейси з реальними компаніями**: відгук Daqin Huang
 (Bilei International Trade) про угоду з Concept Fruits; картки
 постачальників згадують роботу з Sanofi, GSK, Novartis, Clarins
 (BIO15PHARMA) і партнерство з готелем La Toubana (Paradis des Noix)
-*(WebFetch marketplace.businessfrance.fr)* — єдиний серед прямих і
+*(WebFetch marketplace.businessfrance.fr; скріншот
+business-france-testimonial.jpg)* — єдиний серед прямих і
 софт-конкурентів приклад testimonials із реальними іменами й
 компаніями.
 
@@ -80,12 +83,12 @@ cellar-33.com)*. Testimonials і ціни відсутні.
 розмова про потреби й технічний контекст; (2) "Work With
 Hand-Selected Talent" — підбір кандидатів, середній час підбору
 менше 24 годин; (3) "The Right Fit, Guaranteed" — пробний період,
-**оплата лише за умови задоволення** *(WebFetch toptal.com)*. Це
-прямий приклад того, як знижувати ризик для клієнта формулюванням
-умов (а не ціни) ще до заявки. Testimonials — із повними іменами й
-посадами (Ian Stokes-Rees, BCG X; Tess Caputo, COO Zoetis; Jay Ram,
-CEO Hud) і логотипами клієнтів (Bridgestone, Precision Drilling,
-Cleveland Cavaliers) *(WebFetch toptal.com)*.
+**оплата лише за умови задоволення** *(WebFetch toptal.com; скріншот
+toptal-perevireni.jpg)*. Це прямий приклад того, як знижувати ризик
+для клієнта формулюванням умов (а не ціни) ще до заявки. Testimonials
+— із повними іменами й посадами (Ian Stokes-Rees, BCG X; Tess Caputo,
+COO Zoetis; Jay Ram, CEO Hud) і логотипами клієнтів (Bridgestone,
+Precision Drilling, Cleveland Cavaliers) *(WebFetch toptal.com)*.
 
 **MH Wines (додатково).** Найсильніший приклад testimonials серед
 усіх ХАРД-конкурентів — **чотири повністю названі відгуки** з
@@ -93,10 +96,11 @@ Cleveland Cavaliers) *(WebFetch toptal.com)*.
 Viloria, Hobuch Wine; Henry Cilek, Martin Ray Winery; Connor Best,
 Napa Valley Vintners), причому відгук Napa Valley Vintners прямо
 прив'язує результат до конкретної виставки (ProWein) і конкретної
-метрики ("over a thousand importers each year") *(WebFetch
-mhwines.nl)*. Multi-step qualification у формі немає — одна загальна
-форма "GET IN TOUCH". Ціни немає, крім загальної фрази "competitive
-prices" у самому відгуку, а не на сайті компанії.
+метрики ("over a thousand importers each year") *(WebFetch mhwines.nl;
+скріншот mh-wines-testimonials.jpg)*. Multi-step qualification у
+формі немає — одна загальна форма "GET IN TOUCH". Ціни немає, крім
+загальної фрази "competitive prices" у самому відгуку, а не на сайті
+компанії.
 
 ## Спільні патерни
 

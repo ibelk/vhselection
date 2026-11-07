@@ -192,6 +192,13 @@ collected"), підтверджуючи життєздатність патер�
 
 *(research/notes/07-marketing.md)*
 
+Візуальні докази для цього розділу й для рядка «Перевірені» з
+матриці — у `research/screens/` (10 нових скріншотів кроку 07: hero
+MAC Wine Services і MH Wines, секції "chosen, not collected" /
+"Verified Expert" / "vetted suppliers", крок реєстрації Business
+France, named-testimonials, форма з вибором ролі Les Grands Vins &
+Co, блог/insights-розділи). Повна галерея — у `research.html`.
+
 ---
 
 ## ВИСНОВКИ
