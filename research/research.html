@@ -88,7 +88,7 @@
   }
   .screens {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
     margin: 16px 0 28px;
   }
@@ -99,10 +99,18 @@
     border-radius: 6px;
     overflow: hidden;
   }
+  .screens a {
+    display: block;
+  }
   .screens img {
     width: 100%;
     display: block;
     border-bottom: 1px solid #3a322a;
+    cursor: zoom-in;
+    transition: opacity 0.15s;
+  }
+  .screens a:hover img {
+    opacity: 0.85;
   }
   .screens figcaption {
     padding: 8px 10px;
@@ -284,31 +292,45 @@
     <h3>Скріни головних екранів</h3>
     <div class="screens">
       <figure>
-        <img src="screens/winexport-management-home.jpg" alt="Winexport Management — головна сторінка">
+        <a href="screens/winexport-management-home.jpg" target="_blank" rel="noopener">
+          <img src="screens/winexport-management-home.jpg" alt="Winexport Management — головна сторінка">
+        </a>
         <figcaption>Winexport Management (ХАРД) — winexport-management.com</figcaption>
       </figure>
       <figure>
-        <img src="screens/les-grands-vins-home.jpg" alt="Les Grands Vins & Co — головна сторінка">
+        <a href="screens/les-grands-vins-home.jpg" target="_blank" rel="noopener">
+          <img src="screens/les-grands-vins-home.jpg" alt="Les Grands Vins & Co — головна сторінка">
+        </a>
         <figcaption>Les Grands Vins & Co (ХАРД) — lesgrandsvins.co</figcaption>
       </figure>
       <figure>
-        <img src="screens/cellar-33-home.jpg" alt="Cellar 33 — головна сторінка">
+        <a href="screens/cellar-33-home.jpg" target="_blank" rel="noopener">
+          <img src="screens/cellar-33-home.jpg" alt="Cellar 33 — головна сторінка">
+        </a>
         <figcaption>Cellar 33 (ХАРД) — cellar-33.com</figcaption>
       </figure>
       <figure>
-        <img src="screens/business-france-marketplace-home.jpg" alt="Business France Marketplace — головна сторінка">
+        <a href="screens/business-france-marketplace-home.jpg" target="_blank" rel="noopener">
+          <img src="screens/business-france-marketplace-home.jpg" alt="Business France Marketplace — головна сторінка">
+        </a>
         <figcaption>Business France Marketplace (СОФТ) — marketplace.businessfrance.fr</figcaption>
       </figure>
       <figure>
-        <img src="screens/toptal-home.jpg" alt="Toptal — головна сторінка">
+        <a href="screens/toptal-home.jpg" target="_blank" rel="noopener">
+          <img src="screens/toptal-home.jpg" alt="Toptal — головна сторінка">
+        </a>
         <figcaption>Toptal (АСПІРАЦІЙНІ) — toptal.com</figcaption>
       </figure>
       <figure>
-        <img src="screens/mac-wine-services-home.jpg" alt="MAC Wine Services — головна сторінка">
+        <a href="screens/mac-wine-services-home.jpg" target="_blank" rel="noopener">
+          <img src="screens/mac-wine-services-home.jpg" alt="MAC Wine Services — головна сторінка">
+        </a>
         <figcaption>MAC Wine Services (ХАРД) — macwineservices.com</figcaption>
       </figure>
       <figure>
-        <img src="screens/mh-wines-home.jpg" alt="MH Wines — головна сторінка">
+        <a href="screens/mh-wines-home.jpg" target="_blank" rel="noopener">
+          <img src="screens/mh-wines-home.jpg" alt="MH Wines — головна сторінка">
+        </a>
         <figcaption>MH Wines (ХАРД) — mhwines.nl</figcaption>
       </figure>
     </div>
@@ -316,43 +338,63 @@
     <h3>Докази довіри, маркетингу й конверсії (крок 07)</h3>
     <div class="screens">
       <figure>
-        <img src="screens/winexport-management-perevireni.jpg" alt="Winexport Management — секція &quot;chosen, not collected&quot;">
+        <a href="screens/winexport-management-perevireni.jpg" target="_blank" rel="noopener">
+          <img src="screens/winexport-management-perevireni.jpg" alt="Winexport Management — секція &quot;chosen, not collected&quot;">
+        </a>
         <figcaption>Winexport Management — "Our partners are chosen, not collected", 37 estates</figcaption>
       </figure>
       <figure>
-        <img src="screens/toptal-perevireni.jpg" alt="Toptal — бейдж Verified Expert і Newsweek">
+        <a href="screens/toptal-perevireni.jpg" target="_blank" rel="noopener">
+          <img src="screens/toptal-perevireni.jpg" alt="Toptal — бейдж Verified Expert і Newsweek">
+        </a>
         <figcaption>Toptal — "Verified Expert", "Top 3%", Newsweek ranking</figcaption>
       </figure>
       <figure>
-        <img src="screens/business-france-perevireni.jpg" alt="Business France — секція Why choose">
+        <a href="screens/business-france-perevireni.jpg" target="_blank" rel="noopener">
+          <img src="screens/business-france-perevireni.jpg" alt="Business France — секція Why choose">
+        </a>
         <figcaption>Business France — "Thousands of vetted suppliers", 10,000+/1,400+/55+</figcaption>
       </figure>
       <figure>
-        <img src="screens/business-france-signup.jpg" alt="Business France — сторінка Customer Login">
+        <a href="screens/business-france-signup.jpg" target="_blank" rel="noopener">
+          <img src="screens/business-france-signup.jpg" alt="Business France — сторінка Customer Login">
+        </a>
         <figcaption>Business France — крок реєстрації перед контактом</figcaption>
       </figure>
       <figure>
-        <img src="screens/business-france-testimonial.jpg" alt="Business France — відгук Daqin Huang">
+        <a href="screens/business-france-testimonial.jpg" target="_blank" rel="noopener">
+          <img src="screens/business-france-testimonial.jpg" alt="Business France — відгук Daqin Huang">
+        </a>
         <figcaption>Business France — named-testimonial (Bilei International Trade)</figcaption>
       </figure>
       <figure>
-        <img src="screens/les-grands-vins-contact-form.jpg" alt="Les Grands Vins & Co — форма контакту з вибором ролі">
+        <a href="screens/les-grands-vins-contact-form.jpg" target="_blank" rel="noopener">
+          <img src="screens/les-grands-vins-contact-form.jpg" alt="Les Grands Vins & Co — форма контакту з вибором ролі">
+        </a>
         <figcaption>Les Grands Vins & Co — форма з полем "I am a" (роль відвідувача)</figcaption>
       </figure>
       <figure>
-        <img src="screens/mh-wines-testimonials.jpg" alt="MH Wines — відгук Liene Muceniece">
+        <a href="screens/mh-wines-testimonials.jpg" target="_blank" rel="noopener">
+          <img src="screens/mh-wines-testimonials.jpg" alt="MH Wines — відгук Liene Muceniece">
+        </a>
         <figcaption>MH Wines — named-testimonials (Vesper Group, Napa Valley Vintners)</figcaption>
       </figure>
       <figure>
-        <img src="screens/mh-wines-newsletter.jpg" alt="MH Wines — форма підписки на розсилку">
+        <a href="screens/mh-wines-newsletter.jpg" target="_blank" rel="noopener">
+          <img src="screens/mh-wines-newsletter.jpg" alt="MH Wines — форма підписки на розсилку">
+        </a>
         <figcaption>MH Wines — єдина форма email-підписки серед конкурентів</figcaption>
       </figure>
       <figure>
-        <img src="screens/mac-wine-services-insights.jpg" alt="MAC Wine Services — сторінка Insights">
+        <a href="screens/mac-wine-services-insights.jpg" target="_blank" rel="noopener">
+          <img src="screens/mac-wine-services-insights.jpg" alt="MAC Wine Services — сторінка Insights">
+        </a>
         <figcaption>MAC Wine Services — блог/insights-розділ</figcaption>
       </figure>
       <figure>
-        <img src="screens/winexport-management-blog.jpg" alt="Winexport Management — сторінка блогу">
+        <a href="screens/winexport-management-blog.jpg" target="_blank" rel="noopener">
+          <img src="screens/winexport-management-blog.jpg" alt="Winexport Management — сторінка блогу">
+        </a>
         <figcaption>Winexport Management — блог "Field notes from the world of Italian wine export"</figcaption>
       </figure>
     </div>
