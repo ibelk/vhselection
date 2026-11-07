@@ -13,6 +13,7 @@
 - [personas.md](personas.md) — реєстр персон (primary позначена)
 - [research/notes/jtbd.md](research/notes/jtbd.md) — jobs to be done та JTBD-матриця
 - [personas.html](personas.html) — персони й jobs як сторінка з навігатором
+- [sitemap.md](sitemap.md) — реєстр сутностей і екранів продукту (головний екран позначено)
 
 ## Посилання
 

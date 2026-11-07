@@ -34,6 +34,9 @@ VH Selection (також згадувана як V&H Selection) — міжнар
 sales-процес із нуля. Персони та jobs — `personas.md` і
 `research/notes/jtbd.md`, сторінка — `personas.html`.
 
+**Головний екран** (поки без контрастного) — `home.html`, показує
+стан Main job. Сутності й повний реєстр екранів — `sitemap.md`.
+
 Висновки ресерчу — у `research/research.md`.
 
 ## Репозиторій
