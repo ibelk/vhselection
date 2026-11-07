@@ -135,6 +135,36 @@
   .flow-block pre.mermaid {
     background: transparent;
   }
+  /* Надійний перезапис кольору тексту всередині Mermaid-діаграм —
+     тема Mermaid по-різному трактує змінні для різних форм вузлів
+     (ромби vs прямокутники), тому форсуємо колір напряму, а не
+     покладаємось лише на themeVariables у скрипті нижче. */
+  .flow-block svg .nodeLabel,
+  .flow-block svg .nodeLabel p,
+  .flow-block svg .edgeLabel,
+  .flow-block svg .edgeLabel p,
+  .flow-block svg tspan,
+  .flow-block svg text {
+    color: #f3ead8 !important;
+    fill: #f3ead8 !important;
+  }
+  .flow-block svg .edgeLabel,
+  .flow-block svg .edgeLabel rect {
+    background-color: #15120f !important;
+    fill: #15120f !important;
+  }
+  .flow-block svg .node rect,
+  .flow-block svg .node polygon {
+    fill: #221c16 !important;
+    stroke: #cda876 !important;
+  }
+  .flow-block svg .edgePath .path {
+    stroke: #cda876 !important;
+  }
+  .flow-block svg marker path {
+    fill: #cda876 !important;
+    stroke: #cda876 !important;
+  }
   .flow-notes {
     display: grid;
     grid-template-columns: 1fr 1fr;
