@@ -10,6 +10,9 @@
 - [research/](research/) — дослідження (наповнюється на уроці, якому знадобиться)
 - [research/research.md](research/research.md) — зведення дослідження (конкуренти, бенчмарк, патерни, висновки)
 - [research/research.html](research/research.html) — те саме зведення як сторінка з навігатором
+- [personas.md](personas.md) — реєстр персон (primary позначена)
+- [research/notes/jtbd.md](research/notes/jtbd.md) — jobs to be done та JTBD-матриця
+- [personas.html](personas.html) — персони й jobs як сторінка з навігатором
 
 ## Посилання
 

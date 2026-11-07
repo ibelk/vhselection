@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VH Selection — Персони та Jobs to be Done</title>
+<link rel="stylesheet" href="_nav/nav.css">
+<style>
+  :root { color-scheme: dark; }
+  body { background: #15120f; margin: 0; }
+  .page-layout > main {
+    background: #15120f;
+    color: #e9e2d6;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.55;
+    max-width: 1040px;
+  }
+  main h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #f3ead8;
+    margin-bottom: 4px;
+  }
+  main .lede {
+    color: #b9ac96;
+    font-size: 14px;
+    max-width: 72ch;
+    margin-bottom: 20px;
+  }
+  main h2 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    color: #cda876;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #3a322a;
+    padding-bottom: 8px;
+    margin-top: 48px;
+  }
+  main h3 {
+    font-size: 16px;
+    color: #f3ead8;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  main h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8d8370;
+    margin: 16px 0 6px;
+  }
+  main p, main li { font-size: 14px; color: #cfc5b4; }
+  main a { color: #cda876; }
+  main code {
+    background: #221c16;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #e9c99a;
+  }
+  .source-note {
+    font-size: 12px;
+    color: #8d8370;
+    border-left: 2px solid #3a322a;
+    padding-left: 12px;
+    margin: 16px 0 28px;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    background: #1a1611;
+    border: 1px solid #3a322a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 0 0 28px;
+    font-size: 12.5px;
+    color: #b9ac96;
+  }
+
+  /* --- tags --- */
+  .tag-hypothesis, .tag-unknown, .tag-confirmed {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 1px 7px;
+    border-radius: 4px;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  .tag-hypothesis { background: #fab219; color: #15120f; }
+  .tag-unknown { background: transparent; color: #8d8370; border: 1px dashed #5c5445; }
+  .tag-confirmed { background: #0ca30c; color: #ffffff; }
+
+  /* --- persona cards --- */
+  .persona-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+    margin: 16px 0 28px;
+  }
+  .persona-card {
+    background: #1a1611;
+    border: 1px solid #3a322a;
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+  .persona-card.primary {
+    border: 1px solid #cda876;
+    box-shadow: 0 0 0 1px rgba(205,168,118,0.25);
+  }
+  .role-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .role-badge.primary { background: #cda876; color: #15120f; }
+  .role-badge.secondary { background: #3a322a; color: #cfc5b4; }
+  .persona-card ul { margin: 4px 0 0; padding-left: 18px; }
+  .persona-card li { margin-bottom: 6px; }
+  .quote-block {
+    border-left: 2px solid #cda876;
+    padding-left: 12px;
+    margin: 4px 0 0;
+    font-size: 13px;
+    font-style: italic;
+    color: #e9c99a;
+  }
+  .quote-attr { font-size: 11px; color: #8d8370; font-style: normal; margin-top: 4px; }
+
+  /* --- jobs --- */
+  .job-main {
+    background: #1a1611;
+    border: 1px solid #cda876;
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin: 16px 0 24px;
+  }
+  .job-main .job-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #cda876;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .job-main blockquote {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #f3ead8;
+    font-family: Georgia, serif;
+    line-height: 1.5;
+  }
+  .job-group { margin: 10px 0 24px; }
+  .job-item {
+    background: #1a1611;
+    border: 1px solid #3a322a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+  }
+  .job-item blockquote {
+    margin: 0 0 6px;
+    font-size: 13.5px;
+    color: #e9e2d6;
+  }
+  .job-meta { font-size: 11.5px; color: #8d8370; }
+  .job-meta b { color: #b9ac96; }
+
+  .table-wrap {
+    overflow-x: auto;
+    margin: 16px 0 28px;
+    border: 1px solid #3a322a;
+    border-radius: 6px;
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 12px; }
+  th, td { border: 1px solid #3a322a; padding: 7px 9px; vertical-align: top; text-align: left; }
+  th { background: #221c16; color: #e9c99a; white-space: nowrap; }
+  tr:nth-child(even) td { background: #1a1611; }
+  .cell-score { font-weight: 700; color: #f3ead8; }
+  .cell-note { display: block; font-size: 10.5px; color: #8d8370; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="./"></div>
+  <main>
+    <h1>VH Selection — Персони та Jobs to be Done</h1>
+    <p class="lede">Зведення <a href="personas.md">personas.md</a> і
+    <a href="research/notes/jtbd.md">research/notes/jtbd.md</a>. Повний
+    текст, усі цитати й джерела — у цих двох файлах; сувора критика
+    кожного твердження — у
+    <a href="research/notes/personas-review.md">research/notes/personas-review.md</a>.</p>
+
+    <div class="legend">
+      <span><span class="tag-confirmed">✓</span> підтверджено ресерчем</span>
+      <span><span class="tag-hypothesis">гіпотеза</span> — обґрунтована інтерпретація, не пряме свідчення</span>
+      <span><span class="tag-unknown">?</span> даних немає — чесно позначено, не вигадано</span>
+    </div>
+
+    <h2>Персони</h2>
+    <p>Поділені за поведінкою, не за віком чи розміром компанії —
+    демографічних даних у ресерчі немає. Деталі поділу —
+    <a href="personas.md">personas.md</a>, розділ «Як ділили».</p>
+
+    <div class="persona-grid">
+
+      <div class="persona-card primary">
+        <span class="role-badge primary">Primary</span>
+        <h3>Виноробня без власного sales-ресурсу</h3>
+
+        <h4>Контекст <span class="tag-hypothesis">гіпотеза</span></h4>
+        <p>Сімейна чи середня виноробня — вже експортує й хоче вийти
+        на нові ринки, або лише починає. Не має власного міжнародного
+        sales-відділу. <span class="source-note" style="margin:4px 0 0;padding-left:8px;">Джерело — бриф CLAUDE.md, не незалежний ресерч.</span></p>
+
+        <h4>Jobs <span class="tag-hypothesis">гіпотеза</span></h4>
+        <p>Знайти перевіреного імпортера й "почати розмову" з
+        експортним партнером, не будуючи власний sales-процес.</p>
+
+        <h4>Болі</h4>
+        <ul>
+          <li><span class="tag-hypothesis">гіпотеза</span> Немає ресурсу самостійно кваліфікувати чи шукати партнерів.</li>
+          <li><span class="tag-hypothesis">гіпотеза</span> Типовий контакт-флоу конкурентів не розрізняє її від імпортера (факт про сайти — підтверджено; що це відчувається як біль — ні).</li>
+        </ul>
+
+        <h4>Тригери довіри</h4>
+        <ul>
+          <li><span class="tag-hypothesis">гіпотеза</span> <b>Заспокоює:</b> бути названою конкретно й з цифрою, а не "зібраною" у список (зразок — Winexport Management, "chosen, not collected", 37 господарств).</li>
+          <li><span class="tag-hypothesis">гіпотеза</span> <b>Насторожує:</b> вимога акаунта перед людським контактом (патерн Business France Marketplace).</li>
+        </ul>
+
+        <h4>Цитата <span class="tag-unknown">?</span></h4>
+        <p style="font-size:12.5px;color:#8d8370;">Жодного відгуку чи цитати з боку виноробні в ресерчі немає.</p>
+      </div>
+
+      <div class="persona-card">
+        <span class="role-badge secondary">Secondary</span>
+        <h3>Імпортер-дослідник каталогу</h3>
+
+        <h4>Контекст <span class="tag-confirmed">✓</span></h4>
+        <p>Дистриб'ютор чи імпортер, що самостійно шукає виноробню
+        під свій ринок і асортимент — основна аудиторія нового
+        каталогу вина.</p>
+
+        <h4>Jobs <span class="tag-hypothesis">гіпотеза</span></h4>
+        <p>Знайти виноробню за регіоном/сортом/сертифікатом. <span class="source-note" style="margin:4px 0 0;padding-left:8px;">Поля взяті з аналізу чужих каталогів (Liv-ex, Allied Grape Growers), не з опитування реальних клієнтів VH Selection.</span></p>
+
+        <h4>Болі</h4>
+        <ul>
+          <li><span class="tag-confirmed">✓</span> У більшості реальних B2B-каталогів вина фільтрів немає взагалі (Business France, Robinson &amp; Sinclair).</li>
+          <li><span class="tag-hypothesis">гіпотеза</span> Там, де фільтри найдетальніші (Liv-ex), вони нішеві — під колекційне вино, не під оптовий сорсинг.</li>
+        </ul>
+
+        <h4>Тригери довіри</h4>
+        <ul>
+          <li><span class="tag-hypothesis">гіпотеза</span> <b>Заспокоює:</b> явний чекліст критеріїв і названі партнери з цифрами.</li>
+          <li><span class="tag-hypothesis">гіпотеза</span> <b>Насторожує:</b> публічна ціна чи гранулярні фільтри, що повертають порожній результат.</li>
+        </ul>
+
+        <h4>Цитата <span class="tag-unknown">?</span></h4>
+        <p style="font-size:12.5px;color:#8d8370;">Жодного відгуку про досвід пошуку в каталозі немає.</p>
+      </div>
+
+      <div class="persona-card">
+        <span class="role-badge secondary">Secondary</span>
+        <h3>Імпортер із виставки</h3>
+
+        <h4>Контекст <span class="tag-hypothesis">гіпотеза</span></h4>
+        <p>Імпортер, що знайомиться з постачальниками особисто на
+        виставках (напр. ProWein), а не через онлайн-пошук. <span class="source-note" style="margin:4px 0 0;padding-left:8px;">Узагальнено з одного testimonial на сайті MH Wines — не підтверджено як типова поведінка сегмента.</span></p>
+
+        <h4>Jobs <span class="tag-hypothesis">гіпотеза</span></h4>
+        <p>Після особистого знайомства — підтвердити масштаб і
+        легітимність компанії онлайн, перш ніж домовлятися про угоду.</p>
+
+        <h4>Болі</h4>
+        <ul>
+          <li><span class="tag-confirmed">✓</span> 5 з 7 досліджених конкурентів не мають жодного named-кейсу, прив'язаного до угоди чи виставки.
+          <span class="tag-hypothesis" style="margin-left:4px;">гіпотеза</span> — що це відчувається як брак опори.</li>
+        </ul>
+
+        <h4>Тригери довіри</h4>
+        <ul>
+          <li><span class="tag-hypothesis">гіпотеза</span> <b>Заспокоює:</b> named-відгук із конкретною виставкою й цифрою.</li>
+          <li><span class="tag-hypothesis">гіпотеза</span> <b>Насторожує:</b> сайт без жодного підтвердження реальних клієнтів.</li>
+        </ul>
+
+        <h4>Цитата <span class="tag-confirmed">✓</span></h4>
+        <div class="quote-block">"...the past two ProWein trade fairs… over a thousand importers each year"</div>
+        <div class="quote-attr">— Napa Valley Vintners, відгук на сайті MH Wines</div>
+      </div>
+
+    </div>
+
+    <h4>Чому саме ця persona — primary</h4>
+    <ul>
+      <li><span class="tag-confirmed">✓</span> Відповідає основному патерну (кураторський консьєрж), не другорядному (каталог).</li>
+      <li><span class="tag-confirmed">✓</span>/<span class="tag-hypothesis">гіпотеза</span> Брак sales-ресурсу — головне обґрунтування самого патерну в ресерчі; чи це правда про реальні виноробні — не перевірено.</li>
+      <li><span class="tag-confirmed">✓</span> Виноробні названі першими в описі продукту (CLAUDE.md).</li>
+    </ul>
+    <p class="source-note">Чесно про слабкість: єдина персона з реальною цитатою в ресерчі — не primary. Деталі — <a href="personas.md">personas.md</a>, розділ «Чому саме ця persona — primary».</p>
+
+    <h2>Jobs — ієрархія</h2>
+
+    <div class="job-main">
+      <span class="job-label">Main job продукту <span class="tag-hypothesis">гіпотеза</span></span>
+      <blockquote>«Коли моя виноробня хоче вийти на новий ринок, але в мене немає власного міжнародного sales-відділу, я хочу, щоб хтось перевірений і надійний узяв на себе пошук і перевірку партнера та супроводив процес, щоб я дійшла до реальної домовленості про експорт, не будуючи власний sales-процес із нуля.»</blockquote>
+      <div class="job-meta"><b>Персона:</b> Primary — Виноробня без власного sales-ресурсу · <b>Джерело:</b> research.md, розділ ПАТЕРНИ</div>
+    </div>
+
+    <h3 style="font-size:14px;color:#cda876;margin-top:24px;">Related jobs (на шляху до main job)</h3>
+    <div class="job-group">
+      <div class="job-item">
+        <blockquote><span class="tag-hypothesis">гіпотеза</span> «Коли я шукаю нового постачальника під свій асортимент, я хочу швидко звузити список виноробень до реально підходящих, щоб не витрачати час на перегляд усіх вручну.»</blockquote>
+        <div class="job-meta"><b>Персона:</b> Імпортер-дослідник каталогу · <b>Джерело:</b> research.md, КАТАЛОГ</div>
+      </div>
+      <div class="job-item">
+        <blockquote><span class="tag-confirmed">✓ підтверджено опосередковано</span> «Коли я бачу нового потенційного партнера вперше, я хочу одразу зрозуміти, що цю компанію хтось уже перевірив, щоб довіряти рекомендації без додаткової перевірки.»</blockquote>
+        <div class="job-meta"><b>Персона:</b> обидва Secondary · <b>Джерело:</b> research.md, КОНКУРЕНТИ «Перевірені» + БЕНЧМАРК — найсильніше обґрунтований job з усіх</div>
+      </div>
+      <div class="job-item">
+        <blockquote><span class="tag-hypothesis">гіпотеза</span> «Коли я щойно познайомився з постачальником на виставці, я хочу швидко підтвердити, що компанія справді масштабна й надійна, щоб наважитися продовжити переговори.»</blockquote>
+        <div class="job-meta"><b>Персона:</b> Імпортер із виставки · <b>Джерело:</b> research.md, МАРКЕТИНГ (один data point)</div>
+      </div>
+      <div class="job-item">
+        <blockquote><span class="tag-hypothesis">гіпотеза</span> «Коли я готова почати розмову з потенційним партнером, я хочу, щоб мене одразу зрозуміли як виноробню, щоб отримати відповідь, релевантну моїй ситуації.»</blockquote>
+        <div class="job-meta"><b>Персона:</b> Primary — Виноробня · <b>Джерело:</b> research.md, КОНКУРЕНТИ «Три відмінності»</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:14px;color:#cda876;">Emotional jobs</h3>
+    <div class="job-group">
+      <div class="job-item"><blockquote><span class="tag-hypothesis">гіпотеза</span> «...я хочу відчувати, що мене бачать як конкретну компанію, а не розчиняють у списку, щоб не боятися втратити власне обличчя.»</blockquote><div class="job-meta"><b>Персона:</b> Primary — Виноробня</div></div>
+      <div class="job-item"><blockquote><span class="tag-hypothesis">гіпотеза</span> «...я хочу відчувати впевненість у виборі ще до контакту, щоб не боятися змарнувати час.»</blockquote><div class="job-meta"><b>Персона:</b> Імпортер-дослідник каталогу</div></div>
+      <div class="job-item"><blockquote><span class="tag-hypothesis">гіпотеза</span> «...я хочу відчувати, що моє особисте враження підтверджується, щоб не почуватися ошуканим.»</blockquote><div class="job-meta"><b>Персона:</b> Імпортер із виставки</div></div>
+    </div>
+
+    <h3 style="font-size:14px;color:#cda876;">Social jobs</h3>
+    <div class="job-group">
+      <div class="job-item"><blockquote><span class="tag-hypothesis">гіпотеза</span> «...я хочу, щоб мене бачили як серйозного, перевіреного гравця, щоб моя репутація починалася з довіри.»</blockquote><div class="job-meta"><b>Персона:</b> Primary — Виноробня</div></div>
+      <div class="job-item"><blockquote><span class="tag-hypothesis">гіпотеза</span> «...я хочу мати конкретний, перевірюваний доказ, щоб виглядати обачним перед колегами чи клієнтами.»</blockquote><div class="job-meta"><b>Персона:</b> Імпортер із виставки</div></div>
+    </div>
+
+    <p class="source-note">5 гіпотез без жодного джерела (паралельні перемовини, бюджет під MOQ, порівняння умов оплати, контакт із референсом, причини звернень у підтримку) навмисно НЕ включені на цю сторінку — вони в <code>research/notes/jtbd.md</code>, розділ «Гіпотези», і не входять в основні списки.</p>
+
+    <h2>JTBD-матриця</h2>
+    <p>П1 = Primary (Виноробня); П2 = Secondary (Імпортер-каталог);
+    П3 = Secondary (Імпортер-виставка). Числа важливості (1-3) — наше
+    судження, обґрунтоване цитатою, але не виміряна величина; повна
+    критика — <a href="research/notes/personas-review.md">personas-review.md</a>.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Job</th><th>П1</th><th>П2</th><th>П3</th><th>Функція</th><th>Конкуренти виконують?</th></tr>
+        <tr>
+          <td>Main — дійти до угоди через перевіреного партнера</td>
+          <td><span class="cell-score">3</span><span class="cell-note">патерн обрано під це</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td>Кураторський консьєрж-процес</td>
+          <td>Так — Winexport Management, Cellar 33, Les Grands Vins &amp; Co</td>
+        </tr>
+        <tr>
+          <td>R1 — звузити вибір партнерів</td>
+          <td><span class="cell-score">1</span><span class="cell-note">не їхня поведінка</span></td>
+          <td><span class="cell-score">3</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td>Каталог з фільтрами</td>
+          <td>Ні, серед прямих — лише Liv-ex/Allied Grape Growers (не прямі аналоги)</td>
+        </tr>
+        <tr>
+          <td>R2 — зрозуміти, що партнера перевірили</td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="cell-score">3</span></td>
+          <td><span class="cell-score">3</span></td>
+          <td>Публічний чекліст / named-партнери</td>
+          <td>Частково — лише Winexport Management явно й конкретно</td>
+        </tr>
+        <tr>
+          <td>R3 — підтвердити враження після зустрічі</td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="cell-score">3</span></td>
+          <td>Named-testimonial з виставкою й цифрою</td>
+          <td>Рідко — 2 з 7 конкурентів</td>
+        </tr>
+        <tr>
+          <td>R4 — бути зрозумілою у своїй ролі</td>
+          <td><span class="cell-score">3</span></td>
+          <td><span class="cell-score">2</span></td>
+          <td><span class="cell-score">2</span></td>
+          <td>Форма контакту з вибором ролі</td>
+          <td>Ні, здебільшого — лише 1 з 5 (Les Grands Vins &amp; Co)</td>
+        </tr>
+        <tr>
+          <td>E1 — відчувати, що мене бачать конкретно</td>
+          <td><span class="cell-score">3</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td>Чекліст критеріїв / named-партнери</td>
+          <td>Частково — Winexport Management єдиний переконливий</td>
+        </tr>
+        <tr>
+          <td>E2 — впевненість у виборі до контакту</td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="cell-score">3</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td>Каталог із чеклистом на картці</td>
+          <td>Ні — жоден прямий конкурент критеріїв на лістингу не показує</td>
+        </tr>
+        <tr>
+          <td>E3 — не почуватися ошуканим</td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="cell-score">3</span></td>
+          <td>Named-testimonial з цифрою/виставкою</td>
+          <td>Рідко — 2 з 7</td>
+        </tr>
+        <tr>
+          <td>S1 — виглядати перевіреним гравцем</td>
+          <td><span class="cell-score">3</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td>Публічний чекліст / мова відбору</td>
+          <td>Частково — Winexport Management єдиний</td>
+        </tr>
+        <tr>
+          <td>S2 — виглядати обачним перед колегами</td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="tag-unknown">?</span></td>
+          <td><span class="cell-score">3</span></td>
+          <td>Named-testimonial з цифрою/виставкою</td>
+          <td>Рідко — 2 з 7</td>
+        </tr>
+      </table>
+    </div>
+
+    <h4>3 jobs для ядра MVP</h4>
+    <p>Важливі для Primary (П1 = 3) <b>і</b> конкуренти їх не
+    виконують: <b>R4</b> (бути зрозумілою у ролі), <b>E1</b>
+    (відчувати себе конкретною компанією), <b>S1</b> (виглядати
+    перевіреним гравцем). E1 і S1 спираються на ту саму функцію —
+    публічний чекліст критеріїв.</p>
+
+    <h4>Функції-кандидати на видалення</h4>
+    <p>Мультимовність одразу на старті, блог/insights-розділ, окрема
+    email-форма, гранулярні фільтри й публічна ціна, реєстрація перед
+    контактом — жодна не покриває жодного job з матриці; детальніше —
+    <a href="research/notes/jtbd.md">jtbd.md</a>, розділ «Висновок».</p>
+
+  </main>
+</div>
+<script src="_nav/tree.js"></script>
+<script src="_nav/nav.js"></script>
+</body>
+</html>

@@ -15,5 +15,11 @@ window.NAV_TREE = [
     pages: [
       { title: "Дослідження", path: "research/research.html" }
     ]
+  },
+  {
+    branch: "Персони",
+    pages: [
+      { title: "Персони та Jobs to be Done", path: "personas.html" }
+    ]
   }
 ];
