@@ -135,6 +135,12 @@
   .flow-block pre.mermaid {
     background: transparent;
   }
+  /* Mermaid лишає svg без фіксованої ширини (лише viewBox), а такий
+     replaced-елемент сам розтягується на всю ширину контейнера —
+     і текст у великих діаграмах стискається, навіть з явним
+     font-size і скасованим max-width. Справжню ширину (= ширина
+     viewBox) ставимо в px скриптом нижче одразу після рендеру
+     Mermaid, тут лише дозволяємо горизонтальний скрол. */
   /* Надійний перезапис кольору тексту всередині Mermaid-діаграм —
      тема Mermaid по-різному трактує змінні для різних форм вузлів
      (ромби vs прямокутники), тому форсуємо колір напряму, а не
@@ -470,7 +476,7 @@ flowchart TD
 <script type="module">
   import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs";
   mermaid.initialize({
-    startOnLoad: true,
+    startOnLoad: false,
     theme: "dark",
     themeVariables: {
       fontSize: "16px",
@@ -487,6 +493,20 @@ flowchart TD
       nodeTextColor: "#e9e2d6",
       edgeLabelBackground: "#15120f"
     }
+  });
+  await mermaid.run();
+  // Mermaid лишає svg без фіксованої ширини (лише viewBox), і браузер
+  // розтягує такий елемент на всю ширину контейнера — текст великих
+  // діаграм стискається. Ставимо справжню ширину/висоту з viewBox,
+  // контейнер (.flow-block) скролиться горизонтально за потреби.
+  document.querySelectorAll(".flow-block svg").forEach((svg) => {
+    const vb = svg.viewBox && svg.viewBox.baseVal;
+    if (!vb || !vb.width) return;
+    svg.removeAttribute("width");
+    svg.removeAttribute("height");
+    svg.style.removeProperty("max-width");
+    svg.style.width = vb.width + "px";
+    svg.style.height = vb.height + "px";
   });
 </script>
 </body>
