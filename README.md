@@ -14,6 +14,8 @@
 - [research/notes/jtbd.md](research/notes/jtbd.md) — jobs to be done та JTBD-матриця
 - [personas.html](personas.html) — персони й jobs як сторінка з навігатором
 - [sitemap.md](sitemap.md) — реєстр сутностей і екранів продукту (головний екран позначено)
+- [flows.md](flows.md) — user flows (Mermaid): main job і ключові related jobs
+- [ia.html](ia.html) — знімок IA (sitemap деревом, flows, матриця трасування) як сторінка з навігатором
 
 ## Посилання
 

@@ -21,5 +21,11 @@ window.NAV_TREE = [
     pages: [
       { title: "Персони та Jobs to be Done", path: "personas.html" }
     ]
+  },
+  {
+    branch: "Структура",
+    pages: [
+      { title: "IA: sitemap, flows, трасування", path: "ia.html" }
+    ]
   }
 ];

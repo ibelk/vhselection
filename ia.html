@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VH Selection — IA</title>
+<link rel="stylesheet" href="_nav/nav.css">
+<style>
+  :root { color-scheme: dark; }
+  body { background: #15120f; margin: 0; }
+  .page-layout > main {
+    background: #15120f;
+    color: #e9e2d6;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.55;
+    max-width: 1080px;
+  }
+  main h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #f3ead8;
+    margin-bottom: 4px;
+  }
+  main .lede {
+    color: #b9ac96;
+    font-size: 14px;
+    max-width: 74ch;
+    margin-bottom: 20px;
+  }
+  main h2 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    color: #cda876;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #3a322a;
+    padding-bottom: 8px;
+    margin-top: 48px;
+  }
+  main h3 {
+    font-size: 15px;
+    color: #f3ead8;
+    margin-top: 24px;
+    margin-bottom: 6px;
+  }
+  main p, main li { font-size: 14px; color: #cfc5b4; }
+  main a { color: #cda876; }
+  main code {
+    background: #221c16;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #e9c99a;
+  }
+  .source-note {
+    font-size: 12px;
+    color: #8d8370;
+    border-left: 2px solid #3a322a;
+    padding-left: 12px;
+    margin: 16px 0 28px;
+  }
+
+  /* --- sitemap tree --- */
+  .ia-tree, .ia-tree ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  .ia-tree > li {
+    margin-bottom: 18px;
+  }
+  .ia-tree .group-label {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #cda876;
+    border-bottom: 1px solid #3a322a;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+  .ia-tree ul {
+    padding-left: 22px;
+    border-left: 1px solid #3a322a;
+  }
+  .screen-card {
+    background: #1a1611;
+    border: 1px solid #3a322a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+  }
+  .screen-card.primary-only {
+    border-color: #cda876;
+  }
+  .screen-card .title {
+    font-size: 14.5px;
+    color: #f3ead8;
+    font-weight: 600;
+  }
+  .screen-card .file {
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 11.5px;
+    color: #e9c99a;
+    background: #221c16;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 8px;
+  }
+  .screen-card .meta {
+    font-size: 12px;
+    color: #b9ac96;
+    margin-top: 6px;
+  }
+  .screen-card .meta b { color: #e9c99a; }
+  .pill {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-right: 6px;
+  }
+  .pill-global { background: #0ca30c; color: #fff; }
+  .pill-contextual { background: #fab219; color: #15120f; }
+
+  /* --- flows --- */
+  .flow-block {
+    background: #1a1611;
+    border: 1px solid #3a322a;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 16px 0 28px;
+    overflow-x: auto;
+  }
+  .flow-block pre.mermaid {
+    background: transparent;
+  }
+  .flow-notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 14px;
+    font-size: 12.5px;
+  }
+  .flow-notes h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8d8370;
+    margin: 0 0 6px;
+  }
+  .flow-notes ul { margin: 0; padding-left: 16px; }
+  .flow-notes code { font-size: 11px; }
+
+  /* --- matrix --- */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 16px 0 20px;
+    border: 1px solid #3a322a;
+    border-radius: 6px;
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td {
+    border: 1px solid #3a322a;
+    padding: 8px 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  th { background: #221c16; color: #e9c99a; }
+  td.job-name { text-align: left; font-weight: 600; color: #e9e2d6; }
+  td.mark { color: #0ca30c; font-weight: 700; font-size: 15px; }
+  tr:nth-child(even) td { background: #1a1611; }
+  th.orphan, td.orphan { background: #3a1414; color: #ff9b8a; }
+  .legend-row { display: flex; gap: 20px; font-size: 12px; color: #b9ac96; margin: 10px 0 24px; }
+  .legend-row span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  .swatch-ok { background: #0ca30c33; border: 1px solid #0ca30c; }
+  .swatch-orphan { background: #3a1414; border: 1px solid #ff9b8a; }
+</style>
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="./"></div>
+  <main>
+    <h1>VH Selection — Інформаційна архітектура</h1>
+    <p class="lede">Знімок IA на основі <a href="sitemap.md">sitemap.md</a>
+    і <a href="flows.md">flows.md</a>. Повний текст з усіма джерелами —
+    у цих двох файлах; ця сторінка лише збирає їх в один погляд.</p>
+
+    <h2>Sitemap</h2>
+    <p>3 групи, 4 екрани. Дерево — за розділом «Екрани» в
+    <code>sitemap.md</code>; жодного екрана поза реєстром.</p>
+
+    <ul class="ia-tree">
+      <li>
+        <span class="group-label">Вхід</span>
+        <ul>
+          <li class="screen-card primary-only">
+            <span class="title">Головний</span><span class="pill pill-global">глобальний</span>
+            <span class="file">home.html</span>
+            <div class="meta"><b>Job:</b> Main — «дійти до реальної домовленості про експорт через перевіреного партнера» (+ контент, що підтримує R2/E1/S1). <b>Персона:</b> Primary і Secondary.</div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="group-label">Каталог</span>
+        <ul>
+          <li class="screen-card">
+            <span class="title">Список виноробень</span><span class="pill pill-global">глобальний</span>
+            <span class="file">catalog.html</span>
+            <div class="meta"><b>Job:</b> R1 — «звузити вибір до реально підходящих партнерів» (+ E2). <b>Персона:</b> Secondary.</div>
+          </li>
+          <li class="screen-card">
+            <span class="title">Картка виноробні</span><span class="pill pill-contextual">контекстний</span>
+            <span class="file">winery.html</span>
+            <div class="meta"><b>Job:</b> E1, S1, R2 (+ R3/E3/S2 за наявності named-відгуку). <b>Персона:</b> переглядає Secondary, job задовольняється для Primary.</div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="group-label">Контакт</span>
+        <ul>
+          <li class="screen-card">
+            <span class="title">Контактна форма</span><span class="pill pill-global">глобальний</span>
+            <span class="file">contact.html</span>
+            <div class="meta"><b>Job:</b> R4 — «бути одразу зрозумілою у своїй ролі», запускає Main. <b>Персона:</b> Primary і Secondary.</div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <p class="source-note">Глибина до Main job для Primary-персони — 1
+    клік (Головний → Контактна форма); межа — 3 кліки. Деталі —
+    <code>sitemap.md</code>, розділ «Навігація».</p>
+
+    <h2>Flows</h2>
+    <p>Mermaid, той самий код, що в <a href="flows.md">flows.md</a>.</p>
+
+    <h3>Flow 1 — Main job: «Дійти до реальної домовленості про експорт через перевіреного партнера»</h3>
+    <div class="flow-block">
+<pre class="mermaid">
+flowchart TD
+  Start(["Виноробня приходить на сайт, уже готова почати розмову"]) --> A["Головний"]
+  A --> B{"Є бодай один named-відгук?"}
+  B -->|Ні| C["Порожній стан: блок довіри без прикладу"]
+  B -->|Так| D["Блок довіри з named-відгуком"]
+  C --> E["Контактна форма"]
+  D --> E
+  E --> F["Обирає роль «Виноробня», заповнює поля"]
+  F --> G{"Усі обов'язкові поля коректні?"}
+  G -->|Ні| H["Помилка: підсвічені поля форми"]
+  H --> F
+  G -->|Так| I["Завантаження: заявка надсилається"]
+  I --> J{"Заявка дійшла успішно?"}
+  J -->|Ні| K["Помилка: сервіс недоступний"]
+  K --> L{"Пробує ще раз?"}
+  L -->|Так| I
+  L -->|Ні| M(["Тупик: виноробня йде з сайту, не достукавшись"])
+  J -->|Так| N["Контактна форма: підтвердження отримано"]
+  N --> O["Куратор зв'язується особисто — поза сайтом"]
+  O --> P(["Main job закрито: реальна домовленість про експорт"])
+</pre>
+      <div class="flow-notes">
+        <div>
+          <h4>Розвилки</h4>
+          <ul>
+            <li><code>B</code> — є бодай один named-відгук</li>
+            <li><code>G</code> — усі поля коректні</li>
+            <li><code>J</code> — заявка дійшла успішно</li>
+            <li><code>L</code> — пробує ще раз після збою</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Стани</h4>
+          <ul>
+            <li><i>Empty</i> — <code>C</code>: немає named-відгуку</li>
+            <li><i>Error</i> — <code>H</code>, <code>K</code></li>
+            <li><i>Loading</i> — <code>I</code></li>
+            <li><i>Тупик</i> — <code>M</code></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3>Flow 2 — R1: «Звузити вибір до реально підходящих партнерів»</h3>
+    <div class="flow-block">
+<pre class="mermaid">
+flowchart TD
+  Start(["Імпортер шукає виноробню під свій ринок"]) --> A["Головний"]
+  A --> B["Список виноробень"]
+  B --> C["Завантаження: список виноробень"]
+  C --> D{"Список завантажився?"}
+  D -->|Ні| E["Помилка: каталог недоступний"]
+  E --> E1{"Пробує ще раз?"}
+  E1 -->|Так| C
+  E1 -->|Ні| F(["Тупик: імпортер іде з сайту"])
+  D -->|Так| D1{"Чи є хоч одна виноробня в каталозі?"}
+  D1 -->|Ні| D2["Порожній стан: каталог ще порожній"]
+  D2 --> D3(["Тупик: немає кого показати, іде з сайту"])
+  D1 -->|Так| G["Обирає фільтри: регіон, сорт, сертифікати"]
+  G --> H{"Фільтри повертають результати?"}
+  H -->|Ні| I["Порожній стан: немає виноробень за цими фільтрами"]
+  I --> J{"Пробує ширші фільтри?"}
+  J -->|Так| G
+  J -->|Ні| K(["Тупик: іде з сайту, не знайшовши"])
+  H -->|Так| L["Переглядає список карток"]
+  L --> M0["Завантаження: картка виноробні"]
+  M0 --> M1{"Картка завантажилась?"}
+  M1 -->|Ні| M2["Помилка: картку не вдалось відкрити"]
+  M2 --> M3{"Пробує ще раз?"}
+  M3 -->|Так| M0
+  M3 -->|Ні| M4(["Тупик: не побачила деталей, іде з сайту"])
+  M1 -->|Так| M["Картка виноробні"]
+  M --> N{"Критерії й відгуки переконують?"}
+  N -->|Ні| O{"Повертається до списку?"}
+  O -->|Так| L
+  O -->|Ні| P(["Тупик: іде з сайту, не переконавшись"])
+  N -->|Так| Q["Контактна форма"]
+  Q --> R(["R1 закрито: лишає заявку під конкретну виноробню"])
+</pre>
+      <div class="flow-notes">
+        <div>
+          <h4>Розвилки</h4>
+          <ul>
+            <li><code>D</code>, <code>E1</code> — завантаження й повтор</li>
+            <li><code>D1</code> — холодний старт каталогу</li>
+            <li><code>H</code>, <code>J</code> — фільтри й повтор</li>
+            <li><code>M1</code>, <code>M3</code> — картка й повтор</li>
+            <li><code>N</code>, <code>O</code> — переконує / повернутись</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Стани</h4>
+          <ul>
+            <li><i>Empty</i> — <code>D2</code>, <code>I</code></li>
+            <li><i>Error</i> — <code>E</code>, <code>M2</code></li>
+            <li><i>Loading</i> — <code>C</code>, <code>M0</code></li>
+            <li><i>Тупики</i> — <code>F</code>, <code>D3</code>, <code>K</code>, <code>M4</code>, <code>P</code></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3>Flow 3 — R2: «Зрозуміти, що партнера вже хтось перевірив»</h3>
+    <div class="flow-block">
+<pre class="mermaid">
+flowchart TD
+  Start(["Імпортер потрапляє на сайт уперше"]) --> A["Головний"]
+  A --> A1["Завантаження: блок довіри"]
+  A1 --> B{"Чекліст критеріїв відбору завантажився?"}
+  B -->|Ні| C["Помилка: блок довіри не показано"]
+  C --> C1{"Пробує ще раз?"}
+  C1 -->|Так| A1
+  C1 -->|Ні| D(["Тупик: не бачить доказу відбору, іде з сайту"])
+  B -->|Так| E{"Чекліст конкретний: назви критеріїв і цифри є?"}
+  E -->|Ні| F["Порожній стан: лише загальні слова без критеріїв"]
+  F --> G(["Тупик: не довіряє методології, іде з сайту"])
+  E -->|Так| H["Список виноробень"]
+  H --> H1{"Чи є хоч одна виноробня в каталозі?"}
+  H1 -->|Ні| H2["Порожній стан: каталог ще порожній"]
+  H2 --> H3(["Тупик: довіряла методології, але нема кого показати"])
+  H1 -->|Так| I0["Завантаження: картка виноробні"]
+  I0 --> I1{"Картка завантажилась?"}
+  I1 -->|Ні| I2["Помилка: картку не вдалось відкрити"]
+  I2 --> I3{"Пробує ще раз?"}
+  I3 -->|Так| I0
+  I3 -->|Ні| I4(["Тупик: не побачила деталей, іде з сайту"])
+  I1 -->|Так| I["Картка виноробні"]
+  I --> J{"Ця виноробня відповідає показаним критеріям?"}
+  J -->|Ні| K{"Пробує іншу картку?"}
+  K -->|Так| H
+  K -->|Ні| L(["Тупик: довіряла методології, але жодна картка не підійшла"])
+  J -->|Так| M["Контактна форма"]
+  M --> N(["R2 закрито: довіряє рекомендації без додаткової перевірки"])
+</pre>
+      <div class="flow-notes">
+        <div>
+          <h4>Розвилки</h4>
+          <ul>
+            <li><code>B</code>, <code>C1</code> — завантаження й повтор</li>
+            <li><code>E</code> — чекліст конкретний</li>
+            <li><code>H1</code> — холодний старт каталогу</li>
+            <li><code>I1</code>, <code>I3</code> — картка й повтор</li>
+            <li><code>J</code>, <code>K</code> — відповідає / інша картка</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Стани</h4>
+          <ul>
+            <li><i>Loading</i> — <code>A1</code>, <code>I0</code></li>
+            <li><i>Error</i> — <code>C</code>, <code>I2</code></li>
+            <li><i>Empty</i> — <code>F</code>, <code>H2</code></li>
+            <li><i>Тупики</i> — <code>D</code>, <code>G</code>, <code>H3</code>, <code>I4</code>, <code>L</code></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2>Матриця трасування</h2>
+    <p>Рядки — 10 jobs із <code>research/notes/jtbd.md</code>. Колонки —
+    4 екрани з <code>sitemap.md</code>. Методологія позначок — та сама,
+    що в sitemap.md: для Main/R1/R2 за flow-діаграмами, для решти — за
+    вже опублікованими прив'язками.</p>
+
+    <div class="legend-row">
+      <span><i class="swatch swatch-ok"></i> є позначка</span>
+      <span><i class="swatch swatch-orphan"></i> сирота (0 позначок у рядку/колонці) — наразі жодної немає</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>Job</th><th>Головний</th><th>Список виноробень</th><th>Картка виноробні</th><th>Контактна форма</th>
+        </tr>
+        <tr><td class="job-name">Main</td><td class="mark">x</td><td></td><td></td><td class="mark">x</td></tr>
+        <tr><td class="job-name">R1</td><td></td><td class="mark">x</td><td class="mark">x</td><td></td></tr>
+        <tr><td class="job-name">R2</td><td class="mark">x</td><td></td><td class="mark">x</td><td></td></tr>
+        <tr><td class="job-name">R3</td><td></td><td></td><td class="mark">x</td><td></td></tr>
+        <tr><td class="job-name">R4</td><td></td><td></td><td></td><td class="mark">x</td></tr>
+        <tr><td class="job-name">E1</td><td class="mark">x</td><td></td><td class="mark">x</td><td></td></tr>
+        <tr><td class="job-name">E2</td><td></td><td class="mark">x</td><td></td><td></td></tr>
+        <tr><td class="job-name">E3</td><td></td><td></td><td class="mark">x</td><td></td></tr>
+        <tr><td class="job-name">S1</td><td class="mark">x</td><td></td><td class="mark">x</td><td></td></tr>
+        <tr><td class="job-name">S2</td><td></td><td></td><td class="mark">x</td><td></td></tr>
+      </table>
+    </div>
+
+    <p class="source-note">Екрани-сироти: немає (Головний — 4, Список
+    виноробень — 2, Картка виноробні — 7, Контактна форма — 2). Jobs-
+    сироти: немає (усі 10 мають ≥1 позначку). Найтонші рядки (лише 1
+    позначка) — R3, R4, E2, E3, S2; технічно не сироти, але варто
+    тримати в полі зору — деталі в <code>sitemap.md</code>, розділ
+    «Трасування».</p>
+
+  </main>
+</div>
+<script src="_nav/tree.js"></script>
+<script src="_nav/nav.js"></script>
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "dark",
+    themeVariables: {
+      darkMode: true,
+      background: "#15120f",
+      mainBkg: "#221c16",
+      primaryColor: "#221c16",
+      primaryTextColor: "#e9e2d6",
+      primaryBorderColor: "#cda876",
+      lineColor: "#cda876",
+      secondaryColor: "#3a322a",
+      tertiaryColor: "#1a1611",
+      textColor: "#cfc5b4",
+      nodeTextColor: "#e9e2d6",
+      edgeLabelBackground: "#15120f"
+    }
+  });
+</script>
+</body>
+</html>
