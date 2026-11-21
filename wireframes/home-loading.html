@@ -1,0 +1,128 @@
+<!--
+  Головний (sitemap.md → «Екрани») — стан «завантаження».
+  flows.md, Flow 3, вузол A1: "Завантаження: блок довіри" — очікування
+  чекліста критеріїв відбору. Сірі заглушки замінюють вміст цієї зони;
+  решта зон і розмітка — ті самі, що на базовій сторінці.
+  Базова сторінка — home.html. Інші стани — home-empty.html,
+  home-error.html. Стану «успіх» немає (sitemap.md → «Стани»: Головний
+  не екран дії).
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Головний — завантаження — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html" aria-current="page">Головний</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="contact.html">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Головний»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li><a href="home.html">Базова (робочий вигляд)</a></li>
+          <li><a href="home-empty.html">Порожній</a></li>
+          <li><a href="home-error.html">Помилка</a></li>
+          <li class="current">Завантаження (поточна)</li>
+        </ul>
+      </nav>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <section class="zone" aria-label="Main job primary-персони">
+          <span class="zone-label">Зона: Main job (flows.md, Flow 1,
+          вузол A → E)</span>
+          <h1>Дійдіть до реальної домовленості про експорт через
+          перевіреного партнера</h1>
+          <p>Для виноробень без власного міжнародного sales-відділу:
+          ми відкриваємо доступ до перспективних ринків вина, напряму
+          зв'язуємо з перевіреними імпортерами й супроводжуємо
+          зростання експорту від початку до кінця. (CLAUDE.md, «Опис
+          продукту»; jtbd.md, Main job)</p>
+          <p>
+            <a class="action-btn" href="contact.html">Почати
+            розмову →</a>
+          </p>
+          <p class="zone-action">Головна дія зони: перехід на
+          Контактну форму — перший крок Main job, 1 клік з Головного
+          (flows.md, Flow 1, вузол E; sitemap.md, screen «Контактна
+          форма / «Почати розмову»»).</p>
+        </section>
+
+        <section class="zone" aria-label="Блок довіри: named-відгук">
+          <span class="zone-label">Зона: блок довіри — named-відгук
+          (sitemap.md, сутність ВІДГУК; flows.md, Flow 1, вузол D)</span>
+          <blockquote>
+            «VH Selection звела нас із трьома новими постачальниками
+            ще до кінця першого кварталу — і кожен відповідав
+            критеріям, які нам показали заздалегідь.»
+          </blockquote>
+          <p>— Marco Ferretti, Head of Sourcing, Ferretti Import S.r.l.
+          (контакт після ProWein 2025)</p>
+          <p class="zone-action">Головна дія зони: підтвердити — ще до
+          заявки, — що партнери VH Selection реальні й названі
+          конкретно, а не анонімний список (personas.md, PRIMARY,
+          «Тригери довіри»: «названою конкретно й з цифрою, а не
+          "зібраною" в загальний список»). Приклад для вайрфрейму за
+          форматом полів ВІДГУКУ з sitemap.md — не зібраний із
+          ресерчу текст.</p>
+        </section>
+
+        <section class="zone" aria-label="Чекліст критеріїв відбору — завантаження">
+          <span class="zone-label">Зона: чекліст критеріїв відбору,
+          завантаження (flows.md, Flow 3, вузол A1; sitemap.md →
+          «Стани»)</span>
+          <h2>Як ми відбираємо партнерів</h2>
+          <p>Завантаження…</p>
+          <div class="skeleton-line" aria-hidden="true"></div>
+          <div class="skeleton-line" aria-hidden="true"></div>
+          <div class="skeleton-line" aria-hidden="true"></div>
+          <div class="skeleton-line short" aria-hidden="true"></div>
+          <p class="zone-action">Симуляція результату завантаження —
+          рішення автоматичне, сторінка не має власної дії (flows.md,
+          Flow 3, вузол B — «Чекліст критеріїв відбору
+          завантажився?»): <a href="home.html">→ Так, завантажилось
+          (базова сторінка)</a> · <a href="home-error.html">→ Ні, не
+          вдалося (помилка)</a></p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>

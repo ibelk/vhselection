@@ -1,0 +1,141 @@
+<!--
+  Список виноробень — стан «порожній». sitemap.md → «Стани» реєструє
+  два реальні випадки, обидва показано тут:
+  1. flows.md, Flow 2, вузол D1 → D2: "Порожній стан: каталог ще
+     порожній" (жодного партнера). Вихід — flows.md, вузол D2 → D3:
+     задокументований тупик («немає кого показати, іде з сайту»).
+     Фільтрів тут не показуємо (нема що фільтрувати) — лишається
+     видимою тільки глобальна навігація, яка не дає сторінці бути
+     повним тупиком.
+  2. flows.md, Flow 2, вузол H → I: "Порожній стан: немає виноробень
+     за цими фільтрами". Показуємо ті самі фільтри (щоб бачила свій
+     вибір) + повідомлення. Рішення J {"Пробує ширші фільтри?"}:
+     Так → G (назад до базової сторінки з фільтрами) — реальне
+     посилання; Ні → задокументований тупик K («іде з сайту, не
+     знайшовши») — сторінки немає, чесно позначено прозою.
+  Базова сторінка — catalog.html. Інші стани — catalog-error.html,
+  catalog-loading.html. Успіх — «—» (sitemap.md → «Стани»).
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Список виноробень — порожній — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html">Головний</a></li>
+        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a href="contact.html">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Список виноробень»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li><a href="catalog.html">Базова (робочий вигляд)</a></li>
+          <li class="current">Порожній (поточна)</li>
+          <li><a href="catalog-error.html">Помилка</a></li>
+          <li><a href="catalog-loading.html">Завантаження</a></li>
+        </ul>
+      </nav>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <section id="cold-start" class="zone" aria-label="Порожній стан: каталог ще порожній">
+          <span class="zone-label">Зона: каталог ще порожній
+          (flows.md, Flow 2, вузол D2; sitemap.md → «Стани»)</span>
+          <h1>Список виноробень</h1>
+          <p><strong>Порожній стан: каталог ще порожній.</strong>
+          Жодної виноробні-партнера ще не опубліковано.</p>
+          <p class="zone-action">Вихід: flows.md (Flow 2, вузол `D2`
+          → `D3`) документує це як тупик — «немає кого показати,
+          імпортер іде з сайту». Власного відновлення для цього
+          випадку ресерч не описує; сторінку рятує від повного
+          тупика лише постійна глобальна навігація зліва (інших
+          екранів звідси немає).</p>
+        </section>
+
+        <section class="zone" aria-label="Порожній стан: немає виноробень за фільтрами">
+          <span class="zone-label">Зона: фільтри не дали результату
+          (flows.md, Flow 2, вузол H → I; sitemap.md → «Стани»)</span>
+
+          <aside aria-label="Поточний вибір фільтрів">
+          <form>
+            <label for="f-region">Регіон / країна походження</label>
+            <select id="f-region" name="region">
+              <option value="" selected>Будь-який регіон</option>
+              <option value="toscana">Toscana, Italia</option>
+              <option value="bordeaux">Bordeaux, France</option>
+              <option value="puglia" selected>Puglia, Italia</option>
+              <option value="languedoc">Languedoc, France</option>
+            </select>
+
+            <label for="f-variety">Сорт / спеціалізація</label>
+            <select id="f-variety" name="variety">
+              <option value="" selected>Будь-яка спеціалізація</option>
+              <option value="still-red">Тихі, червоні</option>
+              <option value="still-white-rose">Тихі, рожеві/білі</option>
+              <option value="sparkling" selected>Ігристі</option>
+            </select>
+
+            <fieldset>
+              <legend>Сертифікати</legend>
+              <label><input type="checkbox" name="cert" value="docg" checked> DOCG</label>
+              <label><input type="checkbox" name="cert" value="doc"> DOC</label>
+              <label><input type="checkbox" name="cert" value="aoc"> AOC</label>
+            </fieldset>
+          </form>
+          </aside>
+
+          <p><strong>Порожній стан: немає виноробень за цими
+          фільтрами.</strong> Жодна виноробня в каталозі не відповідає
+          обраному поєднанню.</p>
+          <p>
+            <a class="action-btn" href="catalog.html">Пробує ширші
+            фільтри →</a>
+          </p>
+          <p class="zone-action">Вихід «ширші фільтри» — flows.md,
+          Flow 2, вузол `J` (`Так` → `G`), веде назад на базову
+          сторінку з фільтрами. Якщо не пробує ширші фільтри,
+          flows.md документує це як тупик (`J` → `Ні` → `K`: «іде з
+          сайту, не знайшовши») — сторінки для цього немає, чесно
+          позначено тут проти вигадування зайвого екрана.</p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>

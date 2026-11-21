@@ -1,0 +1,130 @@
+<!--
+  Контактна форма — стан «помилка». sitemap.md → «Стани» реєструє два
+  реальні випадки, обидва показано тут:
+  1. flows.md, Flow 1, вузол G → H: "Помилка: підсвічені поля форми" —
+     невалідне введення. Вихід не тупик: H → F, форма лишається
+     доступною для виправлення.
+  2. flows.md, Flow 1, вузол J → K: "Помилка: сервіс недоступний" —
+     усі поля коректні, але заявка не дійшла. Вихід — flows.md, вузол
+     L {"Пробує ще раз?"}: Так → I (повторне надсилання). L → Ні — це
+     задокументований тупик `M` («виноробня йде з сайту, не
+     достукавшись»); окремого каналу підтримки для цього випадку
+     ресерч не називає, тож інших виходів, крім повтору, тут немає.
+  Базова сторінка — contact.html. Інші стани — contact-loading.html,
+  contact-success.html. Порожнього стану немає (sitemap.md → «Стани»:
+  «—»).
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контактна форма — помилка — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html">Головний</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="contact.html" aria-current="page">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Контактна форма»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li><a href="contact.html">Базова, форма</a></li>
+          <li class="current">Помилка (поточна)</li>
+          <li><a href="contact-loading.html">Завантаження</a></li>
+          <li><a href="contact-success.html">Успіх</a></li>
+        </ul>
+      </nav>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <section class="zone" aria-label="Контактна форма — помилка: невалідні поля">
+          <span class="zone-label">Зона: контактна форма, помилка —
+          невалідні поля (flows.md, Flow 1, вузол G → H)</span>
+          <h1>Почати розмову</h1>
+
+          <form>
+            <label for="f-role">Я є</label>
+            <select id="f-role" name="role" required>
+              <option value="winery" selected>Виноробнею</option>
+              <option value="importer">Імпортером / дистриб'ютором</option>
+              <option value="other">Інше</option>
+            </select>
+
+            <label for="f-name">Ім'я</label>
+            <input id="f-name" name="name" type="text" required value="Giulia Conti">
+
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" required
+              aria-invalid="true" value="giulia@">
+            <p class="field-error">Помилка: введіть коректний email.</p>
+
+            <label for="f-message">Повідомлення</label>
+            <textarea id="f-message" name="message" rows="5" required
+              aria-invalid="true"></textarea>
+            <p class="field-error">Помилка: заповніть повідомлення.</p>
+
+            <a class="action-btn" href="contact.html">Надіслати заявку</a>
+          </form>
+
+          <p class="zone-action">Помилка: підсвічені поля форми
+          (flows.md, Flow 1, вузол H). Вихід — виправити поля й
+          надіслати ще раз: посилання веде назад на базову форму
+          (`H` → `F`, не тупик).</p>
+        </section>
+
+        <section class="zone" aria-label="Контактна форма — помилка: сервіс недоступний">
+          <span class="zone-label">Зона: контактна форма, помилка —
+          сервіс недоступний (flows.md, Flow 1, вузол J → K)</span>
+          <p><strong>Помилка: сервіс недоступний.</strong> Заявку від
+          Giulia Conti (Виноробня) заповнено коректно, але вона не
+          дійшла.</p>
+          <p>
+            <a class="action-btn" href="contact-loading.html">Спробувати
+            ще раз</a>
+          </p>
+          <p class="zone-action">Вихід «спробувати ще» — flows.md, Flow
+          1, вузол L (`Так` → `I`). Якщо не спробувати ще раз, flows.md
+          документує це як тупик (`L` → `Ні` → `M`: «виноробня йде з
+          сайту, не достукавшись»); іншого каналу підтримки ресерч не
+          називає.</p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>

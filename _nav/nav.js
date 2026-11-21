@@ -20,13 +20,22 @@
     list.className = "nav-list";
     pages.forEach(function (page) {
       var li = document.createElement("li");
-      var a = document.createElement("a");
-      a.href = root + page.path;
-      a.textContent = page.title;
-      if (resolveUrl(page.path) === currentUrl) {
-        a.className = "nav-current";
+      if (page.path) {
+        var a = document.createElement("a");
+        a.href = root + page.path;
+        a.textContent = page.title;
+        if (resolveUrl(page.path) === currentUrl) {
+          a.className = "nav-current";
+        }
+        li.appendChild(a);
+      } else {
+        // Розділ-група без власної сторінки (напр. група зі sitemap.md) —
+        // підпис без посилання, самі сторінки лежать у children.
+        var label = document.createElement("span");
+        label.className = "nav-group-label";
+        label.textContent = page.title;
+        li.appendChild(label);
       }
-      li.appendChild(a);
       if (page.children && page.children.length) {
         li.appendChild(renderPages(page.children));
       }

@@ -16,6 +16,8 @@
 - [sitemap.md](sitemap.md) — реєстр сутностей і екранів продукту (головний екран позначено)
 - [flows.md](flows.md) — user flows (Mermaid): main job і ключові related jobs
 - [ia.html](ia.html) — знімок IA (sitemap деревом, flows, матриця трасування) як сторінка з навігатором
+- [wireframes/_conventions.md](wireframes/_conventions.md) — правила вайрфреймів: рамка, розмітка, назви файлів, стани
+- [wireframes/home.html](wireframes/home.html) — вайрфрейми продукту (усі 4 екрани й стани, сірим, у рамці `.device`)
 
 ## Посилання
 

@@ -1,0 +1,89 @@
+<!--
+  Контактна форма — стан «успіх» (екран дії, sitemap.md → «Стани»:
+  людина вносить дані заявки — успіх застосовний). flows.md, Flow 1,
+  вузол N: "Контактна форма: підтвердження отримано". Далі за flow:
+  N → O «Куратор зв'язується особисто — поза сайтом» → P «Main job
+  закрито». Вузол P — за межею того, що показує сайт (flows.md,
+  «Чесна межа»; sitemap.md, сутність УГОДА — `[?]`), тут не
+  зображений як дія сайту.
+  Базова сторінка — contact.html. Інші стани — contact-error.html,
+  contact-loading.html. Порожнього стану немає (sitemap.md → «Стани»:
+  «—»).
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контактна форма — успіх — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html">Головний</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="contact.html" aria-current="page">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Контактна форма»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li><a href="contact.html">Базова, форма</a></li>
+          <li><a href="contact-error.html">Помилка</a></li>
+          <li><a href="contact-loading.html">Завантаження</a></li>
+          <li class="current">Успіх (поточна)</li>
+        </ul>
+      </nav>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <section class="zone" aria-label="Контактна форма — успіх">
+          <span class="zone-label">Зона: контактна форма, успіх
+          (flows.md, Flow 1, вузол N; job R4 запускає Main job)</span>
+          <h1>Дякуємо — заявку отримано</h1>
+          <p>Ми отримали вашу заявку як <strong>Виноробня</strong> від
+          Giulia Conti (giulia@contirosso.it).</p>
+          <p>Далі: куратор VH Selection зв'яжеться з вами особисто —
+          поза сайтом (flows.md, Flow 1, вузол N → O).</p>
+          <p class="zone-action">Головна дія зони: немає — це
+          підтверджувальний кінець дії. Сама домовленість про експорт
+          (flows.md, вузол P) фіксується поза сайтом — межа того, що
+          сайт відстежує (flows.md, «Чесна межа»; sitemap.md, сутність
+          УГОДА — `[?]`).</p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!--
+  Список виноробень (sitemap.md → «Екрани», група «Каталог»,
+  сутності ВИНОРОБНЯ, ВИНО). Базова (робочий вигляд) сторінка.
+  Job R1 — jtbd.md: «звузити вибір до реально підходящих партнерів»
+  (Secondary, Імпортер-дослідник каталогу); підтримує й E2.
+  Обслуговує flows.md, Flow 2:
+    B["Список виноробень"] → C["Завантаження"] → D{"Завантажився?"}
+    -->|Так| D1{"Чи є хоч одна виноробня?"} -->|Так|
+    G["Обирає фільтри: регіон, сорт, сертифікати"]
+    → H{"Фільтри повертають результати?"} -->|Так|
+    L["Переглядає список карток"]
+  Інші стани — catalog-empty.html (два випадки: вузли `D2`, `I`),
+  catalog-error.html (вузол `E`), catalog-loading.html (вузол `C`).
+  Успіх — «—» (sitemap.md → «Стани»): не екран дії.
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Список виноробень — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html">Головний</a></li>
+        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a href="contact.html">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Список виноробень»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li class="current">Базова, робочий вигляд (поточна)</li>
+          <li><a href="catalog-empty.html">Порожній</a></li>
+          <li><a href="catalog-error.html">Помилка</a></li>
+          <li><a href="catalog-loading.html">Завантаження</a></li>
+        </ul>
+      </nav>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <aside class="zone" aria-label="Фільтри каталогу">
+          <span class="zone-label">Зона: фільтри (sitemap.md →
+          «Рекомендований набір фільтрів»; job R1)</span>
+          <h1>Список виноробень</h1>
+          <p>Звузьте вибір до реально підходящих партнерів — за
+          регіоном, сортом і сертифікатами (jtbd.md, job R1).</p>
+
+          <form>
+            <label for="f-region">Регіон / країна походження</label>
+            <select id="f-region" name="region">
+              <option value="" selected>Будь-який регіон</option>
+              <option value="toscana">Toscana, Italia</option>
+              <option value="bordeaux">Bordeaux, France</option>
+              <option value="puglia">Puglia, Italia</option>
+              <option value="languedoc">Languedoc, France</option>
+            </select>
+
+            <label for="f-variety">Сорт / спеціалізація</label>
+            <select id="f-variety" name="variety">
+              <option value="" selected>Будь-яка спеціалізація</option>
+              <option value="still-red">Тихі, червоні</option>
+              <option value="still-white-rose">Тихі, рожеві/білі</option>
+              <option value="sparkling">Ігристі</option>
+            </select>
+
+            <fieldset>
+              <legend>Сертифікати</legend>
+              <label><input type="checkbox" name="cert" value="docg"> DOCG</label>
+              <label><input type="checkbox" name="cert" value="doc"> DOC</label>
+              <label><input type="checkbox" name="cert" value="aoc"> AOC</label>
+            </fieldset>
+          </form>
+
+          <p class="zone-action">Симуляція: <a
+          href="catalog-empty.html">фільтри не дали результату
+          (`H` → `I`)</a> — рішення автоматичне, сторінка не має
+          власної кнопки «Застосувати» (вайрфрейм фільтрів без
+          бекенду).</p>
+        </aside>
+
+        <section class="zone" aria-label="Список карток виноробень">
+          <span class="zone-label">Зона: список карток ВИНОРОБНЯ
+          (sitemap.md, сутність ВИНОРОБНЯ; flows.md, Flow 2, вузол
+          L; job R1 — «не гортати вручну», порівняння кількох
+          карток одразу)</span>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Назва</th>
+                <th>Регіон</th>
+                <th>Спеціалізація</th>
+                <th>Сертифікат</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="winery-loading.html">Tenuta Conti Rosso</a></td>
+                <td>Toscana, Italia</td>
+                <td>тихі, червоні</td>
+                <td>DOCG</td>
+              </tr>
+              <tr>
+                <td><a href="winery-loading.html">Château Vallière</a></td>
+                <td>Bordeaux, France</td>
+                <td>тихі, червоні</td>
+                <td>AOC</td>
+              </tr>
+              <tr>
+                <td><a href="winery-loading.html">Masseria delle Rose</a></td>
+                <td>Puglia, Italia</td>
+                <td>тихі, рожеві/білі</td>
+                <td>DOC</td>
+              </tr>
+              <tr>
+                <td><a href="winery-loading.html">Domaine Hauterive</a></td>
+                <td>Languedoc, France</td>
+                <td>ігристі</td>
+                <td>AOC</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="zone-action">Головна дія зони: обрати назву
+          виноробні — веде на завантаження картки (flows.md, Flow 2,
+          вузол `L` → `M0`), не одразу на готову картку.</p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>

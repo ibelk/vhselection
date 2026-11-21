@@ -1,0 +1,95 @@
+<!--
+  Список виноробень — стан «завантаження». flows.md, Flow 2, вузол C:
+  "Завантаження: список виноробень". Сірі заглушки замінюють зону
+  списку карток; рішення D {"Список завантажився?"} і, якщо так,
+  D1 {"Чи є хоч одна виноробня в каталозі?"} — автоматичні, сторінка
+  симулює всі три можливі результати цього ланцюжка посиланнями:
+    D: Ні → E (помилка) → catalog-error.html
+    D: Так, D1: Ні → D2 (порожній, холодний старт) → catalog-empty.html
+    D: Так, D1: Так → G (фільтри, базова сторінка) → catalog.html
+  Базова сторінка — catalog.html. Інші стани — catalog-empty.html,
+  catalog-error.html. Успіх — «—» (sitemap.md → «Стани»).
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Список виноробень — завантаження — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html">Головний</a></li>
+        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a href="contact.html">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Список виноробень»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li><a href="catalog.html">Базова (робочий вигляд)</a></li>
+          <li><a href="catalog-empty.html">Порожній</a></li>
+          <li><a href="catalog-error.html">Помилка</a></li>
+          <li class="current">Завантаження (поточна)</li>
+        </ul>
+      </nav>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <section class="zone" aria-label="Завантаження: список виноробень">
+          <span class="zone-label">Зона: список карток ВИНОРОБНЯ,
+          завантаження (flows.md, Flow 2, вузол C)</span>
+          <h1>Список виноробень</h1>
+          <p>Завантаження…</p>
+          <div class="skeleton-line" aria-hidden="true"></div>
+          <div class="skeleton-line" aria-hidden="true"></div>
+          <div class="skeleton-line" aria-hidden="true"></div>
+          <div class="skeleton-line short" aria-hidden="true"></div>
+
+          <p class="zone-action">Симуляція результату завантаження —
+          рішення автоматичне, сторінка не має власної дії (flows.md,
+          Flow 2, вузли `D` «Список завантажився?» і, якщо так, `D1`
+          «Чи є хоч одна виноробня в каталозі?»): <a
+          href="catalog-error.html">→ Ні, не вдалося (помилка)</a> ·
+          <a href="catalog-empty.html#cold-start">→ Так, завантажився,
+          але каталог порожній (порожній стан, холодний старт)</a> ·
+          <a href="catalog.html">→ Так, завантажився і є виноробні
+          (базова сторінка)</a></p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!--
+  Картка виноробні — стан «помилка». flows.md, Flow 2, вузол M2 /
+  Flow 3, вузол I2: "Помилка: картку не вдалось відкрити". Вихід —
+  flows.md, вузол M3/I3 {"Пробує ще раз?"}: Так → M0/I0 (повторне
+  завантаження) — реальне посилання на winery-loading.html; Ні →
+  M4/I4 — задокументований тупик («не побачила деталей, іде з
+  сайту»), сторінки немає, чесно позначено прозою.
+  Контекстний екран — глобальна навігація без aria-current (як і на
+  winery.html).
+  Базова сторінка — winery.html. Інший стан — winery-loading.html.
+  Порожній і успіх — «—» (sitemap.md → «Стани»).
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Картка виноробні — помилка — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html">Головний</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="contact.html">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Картка виноробні»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li><a href="winery.html">Базова (робочий вигляд)</a></li>
+          <li class="current">Помилка (поточна)</li>
+          <li><a href="winery-loading.html">Завантаження</a></li>
+        </ul>
+      </nav>
+
+      <p class="zone-action">Ви тут: Картка виноробні — контекстний
+      екран (sitemap.md → «Типи екранів»); немає власного пункту в
+      глобальній навігації, тож жоден пункт зліва не позначено
+      `aria-current`.</p>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <section class="zone" aria-label="Помилка: картку не вдалось відкрити">
+          <span class="zone-label">Зона: картку не вдалось відкрити
+          (flows.md, Flow 2, вузол M2; Flow 3, вузол I2)</span>
+          <h1>Картка виноробні</h1>
+          <p><strong>Помилка: картку не вдалось відкрити.</strong> Не
+          вдалося завантажити деталі цієї виноробні.</p>
+          <p>
+            <a class="action-btn" href="winery-loading.html">Спробувати
+            ще раз</a>
+          </p>
+          <p class="zone-action">Вихід «спробувати ще» — flows.md,
+          Flow 2, вузол `M3` (`Так` → `M0`) / Flow 3, вузол `I3`
+          (`Так` → `I0`). Якщо не спробувати ще раз, flows.md
+          документує це як тупик (Flow 2: `M3` → `Ні` → `M4`; Flow 3:
+          `I3` → `Ні` → `I4` — «не побачила деталей, іде з сайту») —
+          сторінки для цього немає, чесно позначено тут.</p>
+          <p>Або <a href="catalog.html">повернутися до списку
+          виноробень</a>.</p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>

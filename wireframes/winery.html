@@ -1,0 +1,177 @@
+<!--
+  Картка виноробні (sitemap.md → «Екрани», група «Каталог», сутності
+  ВИНОРОБНЯ, ВИНО, КРИТЕРІЙ ВІДБОРУ, ВІДГУК). Базова (робочий вигляд)
+  сторінка. Контекстний екран (sitemap.md → «Типи екранів») — немає
+  пункту глобальної навігації, досягається лише кліком із картки
+  списку, тож жоден пункт global-nav тут не aria-current.
+  Job E1/S1 — jtbd.md: «мене бачать як конкретну компанію» /
+  «виглядати перевіреним гравцем» (Primary, Виноробня); R2 — «зрозуміти,
+  що партнера вже перевірили» (Secondary). Контент підтримує й R3/E3/S2
+  (named-відгук), якщо він є для цієї виноробні.
+  Обслуговує flows.md, Flow 2: M0["Завантаження"] → M1{"Завантажилась?"}
+  -->|Так| M["Картка виноробні"] → N{"Критерії й відгуки переконують?"}
+  і Flow 3: I0["Завантаження"] → I1{"Завантажилась?"} -->|Так|
+  I["Картка виноробні"] → J{"Ця виноробня відповідає показаним
+  критеріям?"} — обидва flow ведуть на цю саму базову сторінку.
+  Інші стани — winery-error.html (вузли M2/I2), winery-loading.html
+  (вузли M0/I0). Порожній і успіх — «—» (sitemap.md → «Стани»): картка
+  завжди показує вже обрану виноробню, і це не екран дії.
+  Виправлено після суворої критики: чекліст критеріїв і named-відгук
+  тепер вкладені в article ВИНОРОБНІ (_conventions.md, розділ 4), не
+  сусідні section під main.
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Картка виноробні — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html">Головний</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="contact.html">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Картка виноробні»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li class="current">Базова, робочий вигляд (поточна)</li>
+          <li><a href="winery-error.html">Помилка</a></li>
+          <li><a href="winery-loading.html">Завантаження</a></li>
+        </ul>
+      </nav>
+
+      <p class="zone-action">Ви тут: Картка виноробні — контекстний
+      екран (sitemap.md → «Типи екранів»); немає власного пункту в
+      глобальній навігації, тож жоден пункт зліва не позначено
+      `aria-current`.</p>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <article class="zone" aria-label="Профіль ВИНОРОБНІ">
+          <span class="zone-label">Зона: профіль ВИНОРОБНІ
+          (sitemap.md, сутність ВИНОРОБНЯ; job E1/S1 — jtbd.md)</span>
+          <h1>Tenuta Conti Rosso</h1>
+          <p>Toscana, Italia — тихі, червоні</p>
+
+          <section aria-label="Список ВИНО">
+            <h2>Вина</h2>
+            <table>
+              <thead>
+                <tr><th>Сорт винограду</th><th>Сертифікат</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Sangiovese</td><td>DOCG</td></tr>
+                <tr><td>Chianti Classico</td><td>DOCG Riserva</td></tr>
+                <tr><td>Vermentino</td><td>DOC</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <p class="zone-action">Головна дія зони: немає окремого
+          переходу — профіль і список ВИНО (sitemap.md, сутність
+          ВИНО) показуються разом, це контент картки, не дія.</p>
+
+          <section aria-label="Чекліст критеріїв відбору для цієї виноробні">
+          <span class="zone-label">Зона: чекліст критеріїв відбору
+          (sitemap.md, сутність КРИТЕРІЙ ВІДБОРУ, застосована до цієї
+          ВИНОРОБНІ; job R2/E1/S1 — jtbd.md). Та сама сутність, той
+          самий чекліст, що на Головному (home.html) — текст не
+          переписано.</span>
+          <h2>Як ми відбираємо партнерів</h2>
+          <table>
+            <thead>
+              <tr><th>Критерій</th><th>Поріг</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Досвід активного експорту</td><td>від 3 років</td></tr>
+              <tr><td>Річний обсяг виробництва</td><td>50 000–500 000 пляшок</td></tr>
+              <tr><td>Сертифікація походження (DOC/DOCG/AOC або еквівалент)</td><td>обов'язкова</td></tr>
+              <tr><td>Особиста перевірка виноробні куратором VH Selection</td><td>до публікації в каталозі</td></tr>
+            </tbody>
+          </table>
+          <p class="zone-action">Головна дія зони: підтвердити R2
+          («партнера вже перевірили») — чекліст показано саме для
+          Tenuta Conti Rosso, не абстрактно.</p>
+          </section>
+
+          <section aria-label="Named-відгук для цієї виноробні">
+          <span class="zone-label">Зона: named-відгук (sitemap.md,
+          сутність ВІДГУК; job R3/E3/S2 — jtbd.md). Приклад для
+          вайрфрейму за форматом полів ВІДГУКУ з sitemap.md — не
+          зібраний із ресерчу текст, як і відгук на home.html.</span>
+          <blockquote>
+            «Познайомилися з власником Tenuta Conti Rosso на стенді
+            VH Selection під час ProWein 2025 — за місяць уже
+            узгоджували першу партію Chianti Classico.»
+          </blockquote>
+          <p>— Daqin Huang, Senior Buyer, Business France Wine Desk
+          (ProWein 2025)</p>
+          <p class="zone-action">Головна дія зони: немає окремого
+          переходу — відгук контентно підтверджує картку, перед
+          рішенням нижче.</p>
+          </section>
+        </article>
+
+        <section class="zone" aria-label="Рішення: критерії й відгуки переконують?">
+          <span class="zone-label">Зона: рішення (flows.md, Flow 2,
+          вузол N «Критерії й відгуки переконують?»; Flow 3, вузол J
+          «Ця виноробня відповідає показаним критеріям?»)</span>
+
+          <p>
+            <a class="action-btn" href="contact.html">Почати
+            розмову →</a>
+          </p>
+          <p class="zone-action">Так, переконують — головна дія
+          зони: перехід на Контактну форму (flows.md, Flow 2, вузол
+          `N` → `Q`; Flow 3, вузол `J` → `M`).</p>
+
+          <p>Ні, не переконують — <a href="catalog.html">повертається
+          до списку виноробень</a>.</p>
+          <p class="zone-action">Вихід «назад до списку» — flows.md,
+          Flow 2, вузол `O` (`Так` → `L`) / Flow 3, вузол `K` (`Так`
+          → `H`). Якщо не повертається до списку, flows.md документує
+          це як тупик (Flow 2: `O` → `Ні` → `P`; Flow 3: `K` → `Ні`
+          → `L` — «іде з сайту, не переконавшись / жодна картка не
+          підійшла») — сторінки для цього немає, чесно позначено
+          тут.</p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>

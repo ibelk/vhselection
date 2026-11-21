@@ -65,3 +65,12 @@
   background: #e4e4e4;
   font-weight: 600;
 }
+
+.nav-group-label {
+  display: block;
+  padding: 3px 6px;
+  color: #888;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}

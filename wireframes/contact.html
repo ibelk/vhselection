@@ -1,0 +1,112 @@
+<!--
+  Контактна форма / «Почати розмову» (sitemap.md → «Екрани», група
+  «Контакт», сутність ЗАЯВКА / КОНТАКТ-ЗВЕРНЕННЯ). Job R4 — jtbd.md:
+  «бути одразу зрозумілою у своїй ролі» (Primary, Виноробня — поле
+  ролі в формі); запускає Main job.
+  Базова (робоча) сторінка — сама форма (екран введення: форма не
+  рахується станом, sitemap.md → «Стани»). Обслуговує flows.md,
+  Flow 1, вузол E → F → G: показ форми й вибір ролі, перед перевіркою
+  обов'язкових полів.
+  Порожнього стану немає (sitemap.md → «Стани»: «—», форма завжди
+  доступна для заповнення). Інші стани — contact-error.html (два
+  випадки: невалідні поля, вузол H; сервіс недоступний, вузол K),
+  contact-loading.html (вузол I), contact-success.html (вузол N —
+  екран дії, має успіх).
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контактна форма — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html">Головний</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="contact.html" aria-current="page">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Контактна форма»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li class="current">Базова, форма (поточна)</li>
+          <li><a href="contact-error.html">Помилка</a></li>
+          <li><a href="contact-loading.html">Завантаження</a></li>
+          <li><a href="contact-success.html">Успіх</a></li>
+        </ul>
+      </nav>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <section class="zone" aria-label="Контактна форма — ЗАЯВКА">
+          <span class="zone-label">Зона: контактна форма (sitemap.md,
+          сутність ЗАЯВКА; flows.md, Flow 1, вузол F; job R4 —
+          jtbd.md)</span>
+          <h1>Почати розмову</h1>
+          <p>Розкажіть, хто ви і що шукаєте, — ми відповімо релевантно
+          саме вашій ситуації (jtbd.md, job R4: «бути одразу
+          зрозумілою у своїй ролі»).</p>
+
+          <form>
+            <label for="f-role">Я є</label>
+            <select id="f-role" name="role" required>
+              <option value="" selected>Оберіть роль</option>
+              <option value="winery">Виноробнею</option>
+              <option value="importer">Імпортером / дистриб'ютором</option>
+              <option value="other">Інше</option>
+            </select>
+
+            <label for="f-name">Ім'я</label>
+            <input id="f-name" name="name" type="text" required>
+
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" required>
+
+            <label for="f-message">Повідомлення</label>
+            <textarea id="f-message" name="message" rows="5" required></textarea>
+
+            <a class="action-btn" href="contact-loading.html">Надіслати заявку</a>
+          </form>
+
+          <p class="zone-action">Головна дія зони: надіслати заявку —
+          перший крок Main job, веде на сторінку результату дії
+          (flows.md, Flow 1: `F` → `G` → `I` → `J` → `N`).</p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>

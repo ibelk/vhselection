@@ -1,0 +1,126 @@
+<!--
+  Головний (sitemap.md → «Екрани») — стан «порожній».
+  flows.md, Flow 1, вузол B → C: "Порожній стан: блок довіри без
+  прикладу" (немає named-відгуку) → C → E, одразу веде на Контактну
+  форму — не тупик.
+  flows.md, Flow 3, вузол E → F: "Порожній стан: лише загальні слова
+  без критеріїв" (чекліст є, але не конкретний) → F → G; за цим flow —
+  задокументований тупик (людина йде з сайту, не дійшовши до
+  каталогу). Тут усе одно лишаємо видимий вихід — ту саму дію «Почати
+  розмову» в зоні Main job і глобальну навігацію; власного відновлення
+  для цього випадку ресерч не документує.
+  Базова сторінка — home.html. Інші стани — home-error.html,
+  home-loading.html. Стану «успіх» немає (sitemap.md → «Стани»:
+  Головний не екран дії).
+-->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Головний — порожній — VH Selection (вайрфрейм)</title>
+<link rel="stylesheet" href="../_nav/nav.css">
+<link rel="stylesheet" href="_frame.css">
+</head>
+<body>
+<div class="page-layout">
+  <div id="repo-nav" data-root="../"></div>
+  <div class="device-holder">
+  <div class="device">
+  <div class="shell">
+
+    <nav class="global-nav" aria-label="Глобальна навігація">
+      <ul>
+        <li><a href="home.html" aria-current="page">Головний</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="contact.html">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-area">
+
+      <nav class="zone state-switch" aria-label="Стани екрана «Головний»">
+        <span class="zone-label">Стани цього екрана
+        (wireframes/_conventions.md)</span>
+        <ul>
+          <li><a href="home.html">Базова (робочий вигляд)</a></li>
+          <li class="current">Порожній (поточна)</li>
+          <li><a href="home-error.html">Помилка</a></li>
+          <li><a href="home-loading.html">Завантаження</a></li>
+        </ul>
+      </nav>
+
+      <header class="page-header">
+        <strong>VH Selection</strong> — консалтинг і маркетинг для
+        експорту вина
+      </header>
+
+      <main>
+
+        <section class="zone" aria-label="Main job primary-персони">
+          <span class="zone-label">Зона: Main job (flows.md, Flow 1,
+          вузол A → E)</span>
+          <h1>Дійдіть до реальної домовленості про експорт через
+          перевіреного партнера</h1>
+          <p>Для виноробень без власного міжнародного sales-відділу:
+          ми відкриваємо доступ до перспективних ринків вина, напряму
+          зв'язуємо з перевіреними імпортерами й супроводжуємо
+          зростання експорту від початку до кінця. (CLAUDE.md, «Опис
+          продукту»; jtbd.md, Main job)</p>
+          <p>
+            <a class="action-btn" href="contact.html">Почати
+            розмову →</a>
+          </p>
+          <p class="zone-action">Головна дія зони: перехід на
+          Контактну форму — перший крок Main job, 1 клік з Головного
+          (flows.md, Flow 1, вузол E; sitemap.md, screen «Контактна
+          форма / «Почати розмову»»).</p>
+        </section>
+
+        <section class="zone" aria-label="Блок довіри: named-відгук — порожній стан">
+          <span class="zone-label">Зона: блок довіри — named-відгук,
+          порожній стан (flows.md, Flow 1, вузол C; sitemap.md →
+          «Стани»)</span>
+          <p><strong>Порожній стан: блок довіри без прикладу.</strong>
+          Ще немає опублікованого named-відгуку від партнера.</p>
+          <p class="zone-action">Вихід: не тупик — flows.md (Flow 1,
+          вузол `C` → `E`) веде одразу далі, на Контактну форму: <a
+          href="contact.html">Почати розмову</a> (та сама дія, що в
+          зоні Main job вище).</p>
+        </section>
+
+        <section class="zone" aria-label="Чекліст критеріїв відбору — порожній стан">
+          <span class="zone-label">Зона: чекліст критеріїв відбору,
+          порожній стан (flows.md, Flow 3, вузол F; sitemap.md →
+          «Стани»)</span>
+          <h2>Як ми відбираємо партнерів</h2>
+          <p><strong>Порожній стан: лише загальні слова без
+          критеріїв.</strong> «Ми співпрацюємо лише з перевіреними
+          партнерами.»</p>
+          <p class="zone-action">Вихід: flows.md (Flow 3, вузол `F` →
+          `G`) документує це як тупик — без конкретних критеріїв
+          людина здебільшого йде з сайту, не дійшовши до каталогу.
+          Власного відновлення для цього випадку ресерч не описує;
+          лишається той самий вихід, що й на базовій сторінці: <a
+          href="contact.html">Почати розмову</a> в зоні вище, і
+          глобальна навігація зліва.</p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <span class="zone-label">Підвал</span>
+        VH Selection — міжнародна консалтингова та маркетингова
+        компанія для бутикових виноробень і виробників вина середнього
+        масштабу (CLAUDE.md, «Опис продукту»).
+      </footer>
+
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="../_nav/tree.js"></script>
+<script src="../_nav/nav.js"></script>
+</body>
+</html>
