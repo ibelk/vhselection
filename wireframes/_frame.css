@@ -159,6 +159,20 @@ footer.site-footer {
   font-size: 12px;
   color: #666;
 }
+.site-footer nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.site-footer nav a {
+  color: #555;
+}
+
+.stat-placeholder {
+  color: #888;
+}
 
 form {
   border: 1px dashed #999;
