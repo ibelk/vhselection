@@ -68,6 +68,135 @@
 
 ---
 
+## МОВА КОНКУРЕНТІВ
+
+Новий крок, окремий від кроків 03–09: зібрано не факти про конкурентів
+(це вже зроблено вище), а саме **як вони говорять** — для принципів
+голосу продукту (`voice.md`). Жоден із п'яти основних конкурентів і
+двох додаткових (МАРКЕТИНГ) не ховає контент за логіном — усе нижче
+взято напряму з публічних сторінок (WebFetch). **Відгуки в App Store і
+Google Play не застосовні**: жоден із семи конкурентів не є мобільним
+застосунком — усі B2B-сайти консалтингу/маркетплейсу. Замість них як
+джерело "людей, що пишуть своїми словами" взято відгуки на Trustpilot
+(де вони публічно існують) і named-testimonials прямо на сайтах
+конкурентів.
+
+### Winexport Management (winexport-management.com)
+
+Найсильніший за конкретністю доказу з усіх п'яти (КОНКУРЕНТИ, рядок
+«Перевірені») — і мова це підтверджує:
+
+- Хіро: «Bringing Italian wine to the world's most discerning tables.»
+  / «We are the export partner Italian wineries trust — connecting
+  curated estates with vetted importers, sommeliers and retailers in
+  over forty countries.»
+- Відбір подано як дефіцит, не як послуга: «Our partners are chosen,
+  not collected.» / «Curation over volume» — «We build a portfolio
+  carefully. Fewer estates, deeper relationships, better outcomes for
+  everyone at the table.»
+- Самопозиціювання: «We are export managers, not middlemen.»
+- CTA — м'які, розмовні, не транзакційні: «Start the conversation» /
+  «Begin a conversation» / «Begin the conversation» (не «Get a quote»,
+  не «Apply now»).
+- **Важлива асиметрія звернення:** до імпортера сайт звертається як до
+  рівного партнера в тій самій мережі («vetted importers and buyers»),
+  а до виноробні — як до заявника, що чекає на розгляд: «Tell us about
+  your estate. We read every message and respond personally.» / «If
+  your estate is ready for a discerning international stage, we'd like
+  to hear from you.»
+
+*(WebFetch winexport-management.com, /about, /contact)*
+
+### Toptal (toptal.com)
+
+Найконкретніший за цифрами з усіх семи (КОНКУРЕНТИ, рядок
+«Перевірені»: «Так, дуже явно»):
+
+- Кроки процесу — короткі, наказові заголовки: «Tell us what kind of
+  Talent you need» → «We'll find you the Perfect Match» → «They become
+  part of your Team» → «Work with them at No-Risk».
+- Ризик явно знятий словами, не тільки обіцянкою: «we'll start the
+  process all over again at absolutely no cost.» / «We make sure to
+  start each engagement with a trial period of up to two weeks.»
+- Відбір — із конкретним порогом, без «proprietary»-замовчування:
+  «At Toptal, we thoroughly screen our experts» / «we will not place
+  them until we are 100% confident in their ability.» / «Approximately
+  3% of applicants pass the screening process.»
+- Регістр формальний, але не сухий — скорочення («we'll», «you won't»)
+  і пряме звернення «you»/«your Team».
+- **Відгуки (Trustpilot, TrustScore 4.8, перша сторінка з ~2588):**
+  здебільшого від фрилансерів, не клієнтів-замовників — зі сторони
+  клієнта знайдено лише кілька: «Toptal was very helpful in matching us
+  with the talent we needed.» / «after several interviews I hired 2
+  great candidates that completely owned the project to its
+  completion.» Вибірка замала, щоб вважати це представницьким голосом
+  клієнта — зразок людської, не маркетингової мови, не більше.
+
+*(WebFetch toptal.com/how, toptal.com/faq, trustpilot.com/review/toptal.com)*
+
+### Les Grands Vins & Co (lesgrandsvins.co) і Cellar 33 (cellar-33.com)
+
+Обидва — найслабші за конкретністю доказу (КОНКУРЕНТИ, рядок
+«Перевірені»: «лише якісні прикметники без жодного числа») — мова це
+підтверджує буквально: жодної цифри, жодного названого критерію, лише
+престижні прикметники.
+
+- Les Grands Vins & Co: «We select our estates with the utmost care.»
+  / «We select estates based on the impeccable quality of their
+  wines.» / «Long-term partnerships, deep cultural knowledge, genuine
+  passion for Burgundy.» CTA — родові: «Get in touch», «Discover the
+  agency →».
+- Cellar 33: «we proudly serve as the exclusive export agency for a
+  select portfolio of artisanal wines and spirits.» / «Explore our
+  curated collection and discover the essence of true craftsmanship.»
+  / «we are your trusted partner, handling every detail with precision
+  and care.» CTA — родові: «Explore Our Services», «Learn More About
+  Our Role».
+- Жодного числа, жодного названого партнера, жодного критерію в обох —
+  «utmost care», «impeccable quality», «exclusive», «curated» роблять
+  усю роботу переконання самостійно, без доказу позаду слова.
+
+*(WebFetch lesgrandsvins.co, cellar-33.com)*
+
+### MH Wines (mhwines.nl) і Business France Marketplace (marketplace.businessfrance.fr)
+
+- MH Wines — найближчий до вже обраного патерну named-testimonial:
+  «They've simplified our wine supplies with frequent, smaller
+  purchases at competitive prices.» (Liene Muceniece, Brand Manager,
+  Vesper Group, Latvia) / «The level of service and efficiency found at
+  MH Wines is without compare.» (Henry Cilek, Martin Ray Winery, USA).
+  Мова проста, місійна: «we specialise in simplifying the complex world
+  of international wine trade.» Є й нерівність полірування — «If you
+  have questions, please us our customer helpline» (буквально так на
+  сайті) — нагадування, що навіть прямі конкуренти в цій ніші не мають
+  ідеально вичищеного тексту.
+- Business France Marketplace — єдиний інституційний, а не людський
+  голос: «Thousands of vetted suppliers» / «Business France's experts
+  at your service» / цифри масштабу («10,000+» клієнтів, «1,400+»
+  експертів) замість названих людей. Єдиний серед усіх семи, що веде на
+  «Register as a French supplier» / «Create an account» перед
+  контактом — голос платформи, не людини.
+
+*(WebFetch mhwines.nl, marketplace.businessfrance.fr)*
+
+### Два кластери мови на ринку
+
+1. **Престиж-без-доказу** (Les Grands Vins & Co, Cellar 33): прикметники
+   довіри («exclusive», «curated», «utmost care») без жодної цифри чи
+   названого критерію — слабший кластер, той самий, що БЕНЧМАРК уже
+   визначив найслабшим за доказовістю.
+2. **Впевненість-із-цифрою** (Winexport Management, Toptal): ті самі
+   прикметники довіри, але підперті конкретним числом або порогом
+   («37 estates», «Top 3%», «100% confident») — сильніший кластер,
+   хоча Winexport Management усе ще ховає сам протокол відбору
+   («proprietary»).
+
+Жоден із семи не використовує жарт, оклик чи емодзі в основному тексті
+інтерфейсу — реєстр по всьому ринку формальний або нейтрально-дружній,
+ніде не грайливий.
+
+---
+
 ## БЕНЧМАРК
 
 Повний аналіз — `research/notes/05-benchmark.md`.
