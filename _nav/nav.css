@@ -62,8 +62,13 @@
 }
 
 .nav-list a.nav-current {
-  background: #e4e4e4;
+  background: #333;
+  color: #fff;
   font-weight: 600;
+}
+
+.nav-list a.nav-current:hover {
+  background: #333;
 }
 
 .nav-group-label {
