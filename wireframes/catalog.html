@@ -12,13 +12,20 @@
   Інші стани — catalog-empty.html (два випадки: вузли `D2`, `I`),
   catalog-error.html (вузол `E`), catalog-loading.html (вузол `C`).
   Успіх — «—» (sitemap.md → «Стани»): не екран дії.
+  Крок 08: текст інтерфейсу переписано англійською (research.md,
+  ВИСНОВОК 6 — сайт стартує англійською). Цей коментар, .zone-label,
+  .zone-action і навігатор станів — робочі матеріали курсу, лишаються
+  українською (voice.md, «Мова продукту: англійська»). Назви
+  виноробень, регіони, сорти, сертифікати — зовнішні/довідкові дані,
+  перекладено лише описові слова («тихі, червоні» → «still, red»),
+  власні назви й коди сертифікатів не чіпали.
 -->
 <!doctype html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Список виноробень — VH Selection (вайрфрейм)</title>
+<title>Winery list — VH Selection (wireframe)</title>
 <link rel="stylesheet" href="../_nav/nav.css">
 <link rel="stylesheet" href="_frame.css">
 </head>
@@ -31,9 +38,9 @@
 
     <nav class="global-nav" aria-label="Глобальна навігація">
       <ul>
-        <li><a href="home.html">Головний</a></li>
-        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
-        <li><a href="contact.html">Контакт</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="catalog.html" aria-current="page">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -51,8 +58,8 @@
       </nav>
 
       <header class="page-header">
-        <strong>VH Selection</strong> — консалтинг і маркетинг для
-        експорту вина
+        <strong>VH Selection</strong> — export consulting and
+        marketing for wine
       </header>
 
       <main>
@@ -60,30 +67,30 @@
         <aside class="zone" aria-label="Фільтри каталогу">
           <span class="zone-label">Зона: фільтри (sitemap.md →
           «Рекомендований набір фільтрів»; job R1)</span>
-          <h1>Список виноробень</h1>
-          <p>Звузьте вибір до реально підходящих партнерів. За
-          регіоном, сортом і сертифікатами.</p>
+          <h1>Winery list</h1>
+          <p>Narrow your search to the partners that truly fit. By
+          region, variety, and certifications.</p>
 
           <form>
-            <label for="f-region">Регіон / країна походження</label>
+            <label for="f-region">Region / country of origin</label>
             <select id="f-region" name="region">
-              <option value="" selected>Будь-який регіон</option>
+              <option value="" selected>Any region</option>
               <option value="toscana">Toscana, Italia</option>
               <option value="bordeaux">Bordeaux, France</option>
               <option value="puglia">Puglia, Italia</option>
               <option value="languedoc">Languedoc, France</option>
             </select>
 
-            <label for="f-variety">Сорт / спеціалізація</label>
+            <label for="f-variety">Variety / specialty</label>
             <select id="f-variety" name="variety">
-              <option value="" selected>Будь-яка спеціалізація</option>
-              <option value="still-red">Тихі, червоні</option>
-              <option value="still-white-rose">Тихі, рожеві/білі</option>
-              <option value="sparkling">Ігристі</option>
+              <option value="" selected>Any specialty</option>
+              <option value="still-red">Still, red</option>
+              <option value="still-white-rose">Still, rosé/white</option>
+              <option value="sparkling">Sparkling</option>
             </select>
 
             <fieldset>
-              <legend>Сертифікати</legend>
+              <legend>Certifications</legend>
               <label><input type="checkbox" name="cert" value="docg"> DOCG</label>
               <label><input type="checkbox" name="cert" value="doc"> DOC</label>
               <label><input type="checkbox" name="cert" value="aoc"> AOC</label>
@@ -106,35 +113,35 @@
           <table>
             <thead>
               <tr>
-                <th>Назва</th>
-                <th>Регіон</th>
-                <th>Спеціалізація</th>
-                <th>Сертифікат</th>
+                <th>Name</th>
+                <th>Region</th>
+                <th>Specialty</th>
+                <th>Certification</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><a href="winery-loading.html">Tenuta Conti Rosso</a></td>
                 <td>Toscana, Italia</td>
-                <td>тихі, червоні</td>
+                <td>still, red</td>
                 <td>DOCG</td>
               </tr>
               <tr>
                 <td><a href="winery-loading.html">Château Vallière</a></td>
                 <td>Bordeaux, France</td>
-                <td>тихі, червоні</td>
+                <td>still, red</td>
                 <td>AOC</td>
               </tr>
               <tr>
                 <td><a href="winery-loading.html">Masseria delle Rose</a></td>
                 <td>Puglia, Italia</td>
-                <td>тихі, рожеві/білі</td>
+                <td>still, rosé/white</td>
                 <td>DOC</td>
               </tr>
               <tr>
                 <td><a href="winery-loading.html">Domaine Hauterive</a></td>
                 <td>Languedoc, France</td>
-                <td>ігристі</td>
+                <td>sparkling</td>
                 <td>AOC</td>
               </tr>
             </tbody>
@@ -149,9 +156,8 @@
 
       <footer class="site-footer">
         <span class="zone-label">Підвал</span>
-        VH Selection — міжнародна консалтингова та маркетингова
-        компанія для бутикових виноробень і виробників вина середнього
-        масштабу.
+        VH Selection is an international consulting and marketing
+        company for boutique wineries and mid-scale wine producers.
       </footer>
 
     </div>

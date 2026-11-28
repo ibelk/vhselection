@@ -9,13 +9,17 @@
   winery.html).
   Базова сторінка — winery.html. Інший стан — winery-loading.html.
   Порожній і успіх — «—» (sitemap.md → «Стани»).
+  Крок 08: текст інтерфейсу переписано англійською (research.md,
+  ВИСНОВОК 6 — сайт стартує англійською). Цей коментар, .zone-label,
+  .zone-action і навігатор станів — робочі матеріали курсу, лишаються
+  українською (voice.md, «Мова продукту: англійська»).
 -->
 <!doctype html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Картка виноробні — помилка — VH Selection (вайрфрейм)</title>
+<title>Winery profile — error — VH Selection (wireframe)</title>
 <link rel="stylesheet" href="../_nav/nav.css">
 <link rel="stylesheet" href="_frame.css">
 </head>
@@ -28,9 +32,9 @@
 
     <nav class="global-nav" aria-label="Глобальна навігація">
       <ul>
-        <li><a href="home.html">Головний</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="contact.html">Контакт</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -52,8 +56,8 @@
       `aria-current`.</p>
 
       <header class="page-header">
-        <strong>VH Selection</strong> — консалтинг і маркетинг для
-        експорту вина
+        <strong>VH Selection</strong> — export consulting and
+        marketing for wine
       </header>
 
       <main>
@@ -61,12 +65,12 @@
         <section class="zone" aria-label="Помилка: картку не вдалось відкрити">
           <span class="zone-label">Зона: картку не вдалось відкрити
           (flows.md, Flow 2, вузол M2; Flow 3, вузол I2)</span>
-          <h1>Картка виноробні</h1>
-          <p><strong>Помилка:</strong> не вдалося завантажити деталі
-          цієї виноробні.</p>
+          <h1>Winery profile</h1>
+          <p><strong>Error:</strong> the winery details failed to
+          load.</p>
           <p>
-            <a class="action-btn" href="winery-loading.html">Спробувати
-            ще раз</a>
+            <a class="action-btn" href="winery-loading.html">Try
+            again</a>
           </p>
           <p class="zone-action">Вихід «спробувати ще» — flows.md,
           Flow 2, вузол `M3` (`Так` → `M0`) / Flow 3, вузол `I3`
@@ -74,17 +78,16 @@
           документує це як тупик (Flow 2: `M3` → `Ні` → `M4`; Flow 3:
           `I3` → `Ні` → `I4` — «не побачила деталей, іде з сайту») —
           сторінки для цього немає, чесно позначено тут.</p>
-          <p>Або <a href="catalog.html">повернутися до списку
-          виноробень</a>.</p>
+          <p>Or <a href="catalog.html">back to the winery
+          list</a>.</p>
         </section>
 
       </main>
 
       <footer class="site-footer">
         <span class="zone-label">Підвал</span>
-        VH Selection — міжнародна консалтингова та маркетингова
-        компанія для бутикових виноробень і виробників вина середнього
-        масштабу.
+        VH Selection is an international consulting and marketing
+        company for boutique wineries and mid-scale wine producers.
       </footer>
 
     </div>

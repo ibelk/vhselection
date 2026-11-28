@@ -28,108 +28,114 @@
 
 ## Таблиця
 
+**Крок 08:** колонка «Рядок» тепер англійською (`research.md`,
+ВИСНОВОК 6 — сайт стартує англійською; voice.md, «Мова продукту:
+англійська»). Українські оригінали — в git-історії та розділах «Крок
+02»–«Крок 07» нижче, де фіксувались тодішні правки; ключ, екран, зона,
+тип і джерело не змінились, лише сама мова рядка.
+
 | Ключ | Екран | Зона | Рядок | Тип рядка | Джерело | Примітка |
 |---|---|---|---|---|---|---|
-| `common.header.tagline` | common | шапка | VH Selection — консалтинг і маркетинг для експорту вина | заголовок | продукт | |
-| `common.nav.home` | common | глобальна навігація | Головний | посилання | продукт | |
-| `common.nav.catalog` | common | глобальна навігація | Каталог | посилання | продукт | |
-| `common.nav.contact` | common | глобальна навігація | Контакт | посилання | продукт | |
-| `common.footer.description` | common | підвал | VH Selection — міжнародна консалтингова та маркетингова компанія для бутикових виноробень і виробників вина середнього масштабу. | текст | продукт | Виправлено на кроці 03 — у живому HTML (усі 15 файлів) рядок мав ще й «(CLAUDE.md, «Опис продукту»)» в кінці; цей інвентар уже фіксував правильний текст, але сам файл відставав — тепер синхронізовано |
+| `common.header.tagline` | common | шапка | VH Selection — export consulting and marketing for wine | заголовок | продукт | |
+| `common.nav.home` | common | глобальна навігація | Home | посилання | продукт | |
+| `common.nav.catalog` | common | глобальна навігація | Catalog | посилання | продукт | |
+| `common.nav.contact` | common | глобальна навігація | Contact | посилання | продукт | |
+| `common.footer.description` | common | підвал | VH Selection is an international consulting and marketing company for boutique wineries and mid-scale wine producers. | текст | продукт | Виправлено на кроці 03 — у живому HTML (усі 15 файлів) рядок мав ще й «(CLAUDE.md, «Опис продукту»)» в кінці; цей інвентар уже фіксував правильний текст, але сам файл відставав — тепер синхронізовано |
 | `home.footer.social-facebook` | home | підвал — соцмережі | Facebook | посилання | продукт | Новий ключ, крок 04 — рядок існував на екрані, але не був в інвентарі (знайдено суворою перевіркою) |
 | `home.footer.social-instagram` | home | підвал — соцмережі | Instagram | посилання | продукт | Новий ключ, крок 04 — та сама причина |
 | `home.footer.social-linkedin` | home | підвал — соцмережі | LinkedIn | посилання | продукт | Новий ключ, крок 04 — та сама причина; реальні URL акаунтів не підтверджені (research.md), href лишається заглушкою — це розмітка, не текст |
-| `common.actions.retry` | common | відновлення після помилки (`home-error`, `contact-error`, `catalog-error`, `winery-error`) | Спробувати ще раз | кнопка | продукт | Послідовно однакова скрізь — для порівняння з рештою кнопок нижче |
-| `common.actions.start-conversation` | common | головний CTA (`home.html` — Main job; `winery.html` — рішення) | Почати розмову → | кнопка | продукт | Порівняти з `home.testimonial.empty-recovery` і `contact.form.title` — та сама дія «почати розмову», без «→» |
-| `common.criteria.title` | common | чекліст критеріїв відбору (`home.html`, `winery.html` — обидва базові) | Як ми відбираємо партнерів | заголовок | продукт | |
-| `common.criteria.row-experience` | common | чекліст критеріїв відбору | Досвід активного експорту — від 3 років | текст | продукт | |
-| `common.criteria.row-volume` | common | чекліст критеріїв відбору | Річний обсяг виробництва — 50 000–500 000 пляшок | текст | продукт | |
-| `common.criteria.row-certification` | common | чекліст критеріїв відбору | Сертифікація походження (DOC/DOCG/AOC або еквівалент) — обов'язкова | текст | продукт | |
-| `common.criteria.row-audit` | common | чекліст критеріїв відбору | Особиста перевірка виноробні куратором VH Selection — до публікації в каталозі | текст | продукт | |
-| `common.loading.label` | common | стан завантаження (`home-loading` — уся сторінка одним цілим, крок 06; `catalog-loading`, `winery-loading`) | Завантаження… | повідомлення стану | продукт | |
-| `home.hero.title` | home | Main job | Дійдіть до реальної домовленості про експорт через перевіреного партнера | заголовок | продукт | «партнер» тут узагальнено; порівняти з `catalog.empty.cold-start` («виноробня-партнер») і `winery.profile.name` (конкретна назва) — той самий об'єкт, три формулювання |
-| `home.hero.body` | home | Main job | Для виноробень без власного міжнародного sales-відділу. Ми відкриваємо доступ до перспективних ринків вина й напряму зв'язуємо з перевіреними імпортерами. Супроводжуємо зростання експорту від початку до кінця. | текст | продукт | Виправлено на кроці 02 (прибрано примітку-джерело) і кроці 07 (розбито на коротші речення за зразком Toptal/Winexport — voice.md, «Довжина речень»; враховує, що сайт стартує англійською, research.md ВИСНОВОК 6) |
-| `home.funnel.disclaimer` | home | воронка відбору / умова ризику | Точні цифри зараз не підтверджені. | текст | продукт | Виправлено на кроці 02 — прибрано згадку «вайрфрейму» й «ресерчу» з тексту для користувача (voice.md) |
-| `home.funnel.row-applications` | home | воронка відбору / умова ризику | Заявок на розгляді щомісяця — `[?] N` | текст | продукт (значення не визначено) | Текст-заглушка: `[?] N` — ресерч не підтверджує цифру (research.md, ВИСНОВОК 2) |
-| `home.funnel.row-accepted` | home | воронка відбору / умова ризику | Приймаємо в портфоліо — `[?] X%` | текст | продукт (значення не визначено) | Текст-заглушка, та саме застереження |
-| `home.funnel.row-wineries` | home | воронка відбору / умова ризику | Представлених виноробень — `[?] N` | текст | продукт (значення не визначено) | Текст-заглушка, та саме застереження |
-| `home.audience.title` | home | Для кого цей сайт | Для кого ми | заголовок | продукт | |
-| `home.audience.wineries-heading` | home | Для кого цей сайт | Виноробням | заголовок | продукт | |
-| `home.audience.wineries-body` | home | Для кого цей сайт | Сімейним і середнім виноробням: хочуть почати експорт або вийти на нові ринки, не мають власного міжнародного sales-відділу, шукають представника на закордонних виставках чи імпортера. Для них VH Selection — міжнародний експортний партнер. | текст | продукт | Виправлено на кроці 02 (узгодження) і кроці 07 (коротші речення, voice.md «Довжина речень») |
-| `home.audience.importers-heading` | home | Для кого цей сайт | Імпортерам і дистриб'юторам | заголовок | продукт | |
-| `home.audience.importers-body` | home | Для кого цей сайт | Імпортерам, національним дистриб'юторам, винним мережам, HoReCa-дистриб'юторам, винним байєрам — компанія є джерелом перевірених виробників. | текст | продукт | |
-| `home.testimonial.quote` | home | блок довіри: named-відгук | «VH Selection звела нас із трьома новими постачальниками ще до кінця першого кварталу — і кожен відповідав критеріям, які нам показали заздалегідь.» | текст | зовнішні дані | Приклад для вайрфрейму (ВІДГУК — реальний текст прийде від клієнта, продукт його не пише) |
-| `home.testimonial.attribution` | home | блок довіри: named-відгук | — Marco Ferretti, Head of Sourcing, Ferretti Import S.r.l. (контакт після ProWein 2025) | текст | зовнішні дані | Ім'я, посада, компанія — дані з ВІДГУКУ, не продуктовий текст |
-| `home.testimonial.empty-message` | home-empty | блок довіри: named-відгук, порожній стан | Ще немає опублікованого відгуку від партнера. | повідомлення стану | продукт | Виправлено на кроці 02 — прибрано ярлик стану «Порожній стан:» і внутрішній термін «named-» (voice.md, Заборонене → «Мова системи») |
-| `home.testimonial.empty-recovery` | home-empty | блок довіри: named-відгук, порожній стан | Почати розмову | посилання | продукт | Та сама дія, що `common.actions.start-conversation`, але без «→» — порівняти. Виправлено на кроці 04 — рядок перенесено з `.zone-action` у звичайний `<p>`, бо `.zone-action` сам інвентар виключає зі свого обсягу |
-| `home.criteria.empty-message` | home-empty | чекліст критеріїв відбору, порожній стан | Детальні критерії ще не опубліковані. Ми співпрацюємо лише з перевіреними партнерами. | повідомлення стану | продукт | Виправлено на кроці 02 — прибрано мову flow-діаграми (voice.md, Заборонене → «Мова системи») |
-| `home.criteria.empty-recovery` | home-empty | чекліст критеріїв відбору, порожній стан | Почати розмову | посилання | продукт | Новий ключ, крок 04 — та сама дія, що тепер є на `home.testimonial.empty-recovery`; раніше лежала лише в `.zone-action`, без ключа |
-| `home.error.message` | home-error | уся сторінка, помилка | Помилка: не вдалося завантажити сторінку. | повідомлення стану | продукт | Новий ключ, крок 06 — замінює `home.testimonial.error-message` (крок 05, видалено). Користувач слушно зауважив: для сторінки без бекенду нелогічно, щоб один блок не завантажився, а решта лишилась видимою — помилка тепер стосується всієї сторінки |
-| `home.error.support-link` | home-error | уся сторінка, помилка | напишіть нам через контактну форму | посилання | продукт | Новий ключ, крок 06 — замінює `home.testimonial.error-support-link` (крок 05, видалено) |
-| `contact.form.title` | contact | контактна форма | Почати розмову | заголовок | продукт | Та сама дія/фраза, що `common.actions.start-conversation`, але без «→» — порівняти |
-| `contact.form.intro` | contact | контактна форма | Розкажіть, хто ви і що шукаєте. Ми відповімо релевантно саме вашій ситуації. | текст | продукт | Виправлено на кроці 03 (примітка-джерело) і кроці 07 (коротші речення, voice.md «Довжина речень») |
-| `contact.form.label-role` | contact | контактна форма | Я є | підпис поля | продукт | |
-| `contact.form.option-role-placeholder` | contact | контактна форма | Оберіть роль | текст | продукт | |
-| `contact.form.option-role-winery` | contact | контактна форма | Виноробнею | текст | продукт | |
-| `contact.form.option-role-importer` | contact | контактна форма | Імпортером / дистриб'ютором | текст | продукт | |
-| `contact.form.option-role-other` | contact | контактна форма | Інше | текст | продукт | |
-| `contact.form.label-name` | contact | контактна форма | Ім'я | підпис поля | продукт | |
+| `common.actions.retry` | common | відновлення після помилки (`home-error`, `contact-error`, `catalog-error`, `winery-error`) | Try again | кнопка | продукт | Послідовно однакова скрізь — для порівняння з рештою кнопок нижче |
+| `common.actions.start-conversation` | common | головний CTA (`home.html` — Main job; `winery.html` — рішення) | Start the conversation → | кнопка | продукт | Порівняти з `home.testimonial.empty-recovery` і `contact.form.title` — та сама дія, без «→» |
+| `common.criteria.title` | common | чекліст критеріїв відбору (`home.html`, `winery.html` — обидва базові) | How we select partners | заголовок | продукт | |
+| `common.criteria.row-experience` | common | чекліст критеріїв відбору | Active export experience — 3+ years | текст | продукт | |
+| `common.criteria.row-volume` | common | чекліст критеріїв відбору | Annual production volume — 50,000–500,000 bottles | текст | продукт | |
+| `common.criteria.row-certification` | common | чекліст критеріїв відбору | Certification of origin (DOC/DOCG/AOC or equivalent) — required | текст | продукт | |
+| `common.criteria.row-audit` | common | чекліст критеріїв відбору | Personal winery inspection by a VH Selection curator — before catalog listing | текст | продукт | |
+| `common.loading.label` | common | стан завантаження (`home-loading` — уся сторінка одним цілим, крок 06; `catalog-loading`, `winery-loading`) | Loading… | повідомлення стану | продукт | |
+| `home.hero.title` | home | Main job | Reach a real export deal through a vetted partner | заголовок | продукт | «partner» тут узагальнено; порівняти з `catalog.empty.cold-start` і `winery.profile.name` (конкретна назва) — той самий об'єкт, три формулювання |
+| `home.hero.body` | home | Main job | For wineries without an in-house international sales team. We open access to promising wine markets and connect you directly with vetted importers. We guide your export growth from start to finish. | текст | продукт | Виправлено на кроці 02 (прибрано примітку-джерело) і кроці 07 (коротші речення, voice.md «Довжина речень»); перекладено англійською на кроці 08 |
+| `home.funnel.disclaimer` | home | воронка відбору / умова ризику | Exact figures aren't confirmed yet. | текст | продукт | Виправлено на кроці 02 — прибрано згадку «вайрфрейму» й «ресерчу»; перекладено на кроці 08 |
+| `home.funnel.row-applications` | home | воронка відбору / умова ризику | Applications reviewed monthly — `[?] N` | текст | продукт (значення не визначено) | Текст-заглушка: `[?] N` — ресерч не підтверджує цифру (research.md, ВИСНОВОК 2) |
+| `home.funnel.row-accepted` | home | воронка відбору / умова ризику | Accepted into the portfolio — `[?] X%` | текст | продукт (значення не визначено) | Текст-заглушка, та саме застереження |
+| `home.funnel.row-wineries` | home | воронка відбору / умова ризику | Wineries represented — `[?] N` | текст | продукт (значення не визначено) | Текст-заглушка, та саме застереження |
+| `home.audience.title` | home | Для кого цей сайт | Who we're for | заголовок | продукт | |
+| `home.audience.wineries-heading` | home | Для кого цей сайт | Wineries | заголовок | продукт | |
+| `home.audience.wineries-body` | home | Для кого цей сайт | Family and mid-scale wineries: want to start exporting or enter new markets, don't have an in-house international sales team, are looking for a representative at trade fairs abroad or an importer. For them, VH Selection is an international export partner. | текст | продукт | Виправлено на кроці 02 (узгодження) і кроці 07 (коротші речення); перекладено на кроці 08 |
+| `home.audience.importers-heading` | home | Для кого цей сайт | Importers and distributors | заголовок | продукт | |
+| `home.audience.importers-body` | home | Для кого цей сайт | Importers, national distributors, wine retail chains, HoReCa distributors, wine buyers — the company is a source of vetted producers. | текст | продукт | |
+| `home.testimonial.quote` | home | блок довіри: named-відгук | "VH Selection connected us with three new suppliers before the end of the first quarter — and each one matched the criteria they'd shown us upfront." | текст | зовнішні дані | Приклад для вайрфрейму (ВІДГУК — реальний текст прийде від клієнта, продукт його не пише) |
+| `home.testimonial.attribution` | home | блок довіри: named-відгук | — Marco Ferretti, Head of Sourcing, Ferretti Import S.r.l. (contact made after ProWein 2025) | текст | зовнішні дані | Ім'я, посада, компанія — дані з ВІДГУКУ, не продуктовий текст |
+| `home.testimonial.empty-message` | home-empty | блок довіри: named-відгук, порожній стан | No partner testimonial published yet. | повідомлення стану | продукт | Виправлено на кроці 02 (прибрано «Порожній стан:» і «named-»); перекладено на кроці 08 |
+| `home.testimonial.empty-recovery` | home-empty | блок довіри: named-відгук, порожній стан | Start the conversation | посилання | продукт | Та сама дія, що `common.actions.start-conversation`, без «→» — порівняти. Виправлено на кроці 04 (перенесено з `.zone-action`) |
+| `home.criteria.empty-message` | home-empty | чекліст критеріїв відбору, порожній стан | Detailed criteria aren't published yet. We only work with vetted partners. | повідомлення стану | продукт | Виправлено на кроці 02 (прибрано мову flow-діаграми); перекладено на кроці 08 |
+| `home.criteria.empty-recovery` | home-empty | чекліст критеріїв відбору, порожній стан | Start the conversation | посилання | продукт | Новий ключ, крок 04 — та сама дія, що тепер є на `home.testimonial.empty-recovery`; раніше лежала лише в `.zone-action`, без ключа |
+| `home.error.message` | home-error | уся сторінка, помилка | Error: the page failed to load. | повідомлення стану | продукт | Новий ключ, крок 06 — замінює `home.testimonial.error-message` (крок 05, видалено). Користувач слушно зауважив: для сторінки без бекенду нелогічно, щоб один блок не завантажився, а решта лишилась видимою — помилка тепер стосується всієї сторінки; перекладено на кроці 08 |
+| `home.error.support-link` | home-error | уся сторінка, помилка | contact us through the form | посилання | продукт | Новий ключ, крок 06 — замінює `home.testimonial.error-support-link` (крок 05, видалено) |
+| `contact.form.title` | contact | контактна форма | Start the conversation | заголовок | продукт | Та сама дія/фраза, що `common.actions.start-conversation`, без «→» — порівняти |
+| `contact.form.intro` | contact | контактна форма | Tell us who you are and what you're looking for. We'll reply in a way that's relevant to your situation. | текст | продукт | Виправлено на кроці 03 (примітка-джерело) і кроці 07 (коротші речення); перекладено на кроці 08 |
+| `contact.form.label-role` | contact | контактна форма | I am a | підпис поля | продукт | |
+| `contact.form.option-role-placeholder` | contact | контактна форма | Choose a role | текст | продукт | |
+| `contact.form.option-role-winery` | contact | контактна форма | Winery | текст | продукт | |
+| `contact.form.option-role-importer` | contact | контактна форма | Importer / distributor | текст | продукт | |
+| `contact.form.option-role-other` | contact | контактна форма | Other | текст | продукт | |
+| `contact.form.label-name` | contact | контактна форма | Name | підпис поля | продукт | |
 | `contact.form.label-email` | contact | контактна форма | Email | підпис поля | продукт | |
-| `contact.form.label-message` | contact | контактна форма | Повідомлення | підпис поля | продукт | |
-| `contact.form.submit` | contact | контактна форма | Надіслати заявку | кнопка | продукт | |
-| `contact.form.error-email` | contact-error | контактна форма, помилка — невалідні поля | Помилка: введіть коректний email. | повідомлення стану | продукт | |
-| `contact.form.error-message-required` | contact-error | контактна форма, помилка — невалідні поля | Помилка: заповніть повідомлення. | повідомлення стану | продукт | |
-| `contact.form.sample-name` | contact-error | контактна форма, помилка — невалідні поля | Giulia Conti | текст | дані користувача | Приклад заповненої заявки — у продукті це вводить сам відвідувач |
+| `contact.form.label-message` | contact | контактна форма | Message | підпис поля | продукт | |
+| `contact.form.submit` | contact | контактна форма | Submit application | кнопка | продукт | |
+| `contact.form.error-email` | contact-error | контактна форма, помилка — невалідні поля | Error: enter a valid email. | повідомлення стану | продукт | |
+| `contact.form.error-message-required` | contact-error | контактна форма, помилка — невалідні поля | Error: fill in the message. | повідомлення стану | продукт | |
+| `contact.form.sample-name` | contact-error | контактна форма, помилка — невалідні поля | Giulia Conti | текст | дані користувача | Приклад заповненої заявки — у продукті це вводить сам відвідувач; ім'я не перекладається |
 | `contact.form.sample-email-invalid` | contact-error | контактна форма, помилка — невалідні поля | giulia@ | текст | дані користувача | |
-| `contact.error.service-down-message` | contact-error | контактна форма, помилка — сервіс недоступний | Помилка: сервіс недоступний. Заявку від Giulia Conti (Виноробня) заповнено коректно, але вона не дійшла. | повідомлення стану | продукт + дані користувача (ім'я) | |
-| `contact.loading.sample-fields` | contact-loading | контактна форма, завантаження | Виноробнею / Giulia Conti / giulia@contirosso.it / «Шукаємо імпортера у Скандинавії для нашого ігристого асортименту.» | текст | дані користувача | Приклад уже заповненої заявки, що надсилається |
-| `contact.loading.submitting-label` | contact-loading | контактна форма, завантаження | Надсилання… | кнопка | продукт | |
-| `contact.success.title` | contact-success | контактна форма, успіх | Дякуємо — заявку отримано | заголовок | продукт | |
-| `contact.success.confirmation` | contact-success | контактна форма, успіх | Ми отримали вашу заявку як Виноробня від Giulia Conti (giulia@contirosso.it). | повідомлення стану | продукт + дані користувача (ім'я, email) | |
-| `contact.success.next-steps` | contact-success | контактна форма, успіх | Далі: куратор VH Selection зв'яжеться з вами особисто — поза сайтом. | текст | продукт | Виправлено на кроці 03 — у живому HTML був ще «(flows.md, Flow 1, вузол N → O)» в кінці, якого цей інвентар не фіксував; тепер HTML і таблиця збігаються |
-| `catalog.title` | catalog | список виноробень | Список виноробень | заголовок | продукт | |
-| `catalog.intro` | catalog | фільтри каталогу | Звузьте вибір до реально підходящих партнерів. За регіоном, сортом і сертифікатами. | текст | продукт | Виправлено на кроці 03 (примітка-джерело) і кроці 07 (коротші речення, voice.md «Довжина речень») |
-| `catalog.filters.label-region` | catalog | фільтри каталогу | Регіон / країна походження | підпис поля | продукт | |
-| `catalog.filters.option-region-any` | catalog | фільтри каталогу | Будь-який регіон | текст | продукт | |
+| `contact.error.service-down-message` | contact-error | контактна форма, помилка — сервіс недоступний | Error: service unavailable. The application from Giulia Conti (Winery) was filled in correctly, but it didn't go through. | повідомлення стану | продукт + дані користувача (ім'я) | |
+| `contact.loading.sample-fields` | contact-loading | контактна форма, завантаження | Winery / Giulia Conti / giulia@contirosso.it / "Looking for an importer in Scandinavia for our sparkling wine range." | текст | дані користувача | Приклад уже заповненої заявки, що надсилається |
+| `contact.loading.submitting-label` | contact-loading | контактна форма, завантаження | Submitting… | кнопка | продукт | |
+| `contact.success.title` | contact-success | контактна форма, успіх | Thank you — application received | заголовок | продукт | |
+| `contact.success.confirmation` | contact-success | контактна форма, успіх | We've received your application as a Winery from Giulia Conti (giulia@contirosso.it). | повідомлення стану | продукт + дані користувача (ім'я, email) | |
+| `contact.success.next-steps` | contact-success | контактна форма, успіх | Next: a VH Selection curator will contact you personally — outside the site. | текст | продукт | Виправлено на кроці 03 (прибрано зайву примітку-джерело); перекладено на кроці 08 |
+| `catalog.title` | catalog | список виноробень | Winery list | заголовок | продукт | |
+| `catalog.intro` | catalog | фільтри каталогу | Narrow your search to the partners that truly fit. By region, variety, and certifications. | текст | продукт | Виправлено на кроці 03 (примітка-джерело) і кроці 07 (коротші речення); перекладено на кроці 08 |
+| `catalog.filters.label-region` | catalog | фільтри каталогу | Region / country of origin | підпис поля | продукт | |
+| `catalog.filters.option-region-any` | catalog | фільтри каталогу | Any region | текст | продукт | |
 | `catalog.filters.option-region-toscana` | catalog | фільтри каталогу | Toscana, Italia | текст | зовнішні дані | Географічна назва, не продуктовий текст |
 | `catalog.filters.option-region-bordeaux` | catalog | фільтри каталогу | Bordeaux, France | текст | зовнішні дані | |
 | `catalog.filters.option-region-puglia` | catalog | фільтри каталогу | Puglia, Italia | текст | зовнішні дані | |
 | `catalog.filters.option-region-languedoc` | catalog | фільтри каталогу | Languedoc, France | текст | зовнішні дані | |
-| `catalog.filters.label-variety` | catalog | фільтри каталогу | Сорт / спеціалізація | підпис поля | продукт | |
-| `catalog.filters.option-variety-any` | catalog | фільтри каталогу | Будь-яка спеціалізація | текст | продукт | |
-| `catalog.filters.option-variety-still-red` | catalog | фільтри каталогу | Тихі, червоні | текст | продукт | |
-| `catalog.filters.option-variety-still-white-rose` | catalog | фільтри каталогу | Тихі, рожеві/білі | текст | продукт | |
-| `catalog.filters.option-variety-sparkling` | catalog | фільтри каталогу | Ігристі | текст | продукт | |
-| `catalog.filters.label-certificates` | catalog | фільтри каталогу | Сертифікати | підпис поля | продукт | |
+| `catalog.filters.label-variety` | catalog | фільтри каталогу | Variety / specialty | підпис поля | продукт | |
+| `catalog.filters.option-variety-any` | catalog | фільтри каталогу | Any specialty | текст | продукт | |
+| `catalog.filters.option-variety-still-red` | catalog | фільтри каталогу | Still, red | текст | продукт | |
+| `catalog.filters.option-variety-still-white-rose` | catalog | фільтри каталогу | Still, rosé/white | текст | продукт | |
+| `catalog.filters.option-variety-sparkling` | catalog | фільтри каталогу | Sparkling | текст | продукт | |
+| `catalog.filters.label-certificates` | catalog | фільтри каталогу | Certifications | підпис поля | продукт | |
 | `catalog.filters.cert-docg` | catalog | фільтри каталогу | DOCG | текст | зовнішні дані | Офіційна категорія сертифікації походження, не продуктовий текст |
 | `catalog.filters.cert-doc` | catalog | фільтри каталогу | DOC | текст | зовнішні дані | |
 | `catalog.filters.cert-aoc` | catalog | фільтри каталогу | AOC | текст | зовнішні дані | |
-| `catalog.list.col-name` | catalog | список карток виноробень | Назва | підпис поля | продукт | |
-| `catalog.list.col-region` | catalog | список карток виноробень | Регіон | підпис поля | продукт | |
-| `catalog.list.col-specialty` | catalog | список карток виноробень | Спеціалізація | підпис поля | продукт | |
-| `catalog.list.col-cert` | catalog | список карток виноробень | Сертифікат | підпис поля | продукт | |
-| `catalog.list.row-conti-rosso` | catalog | список карток виноробень | Tenuta Conti Rosso — Toscana, Italia — тихі, червоні — DOCG | текст | зовнішні дані | Запис ВИНОРОБНІ — дані каталогу, не продуктовий текст |
-| `catalog.list.row-valliere` | catalog | список карток виноробень | Château Vallière — Bordeaux, France — тихі, червоні — AOC | текст | зовнішні дані | |
-| `catalog.list.row-masseria` | catalog | список карток виноробень | Masseria delle Rose — Puglia, Italia — тихі, рожеві/білі — DOC | текст | зовнішні дані | |
-| `catalog.list.row-hauterive` | catalog | список карток виноробень | Domaine Hauterive — Languedoc, France — ігристі — AOC | текст | зовнішні дані | |
-| `catalog.empty.cold-start` | catalog-empty | порожній стан: каталог ще порожній | Ще жодного партнера не опубліковано в каталозі. | повідомлення стану | продукт | Виправлено на кроці 03 — прибрано ярлик «Порожній стан:» і гібрид «виноробня-партнер», лишилось слово зі словника — «партнер» |
-| `catalog.empty.cold-start-recovery` | catalog-empty | порожній стан: каталог ще порожній | Почати розмову | кнопка | продукт | Новий ключ, крок 04 — порожній стан не мав жодної дії в реальному тексті (лише глобальна навігація), порушувало правило voice.md, Мікрокопі → «Порожній стан» |
-| `catalog.empty.no-results` | catalog-empty | порожній стан: фільтри без результату | Немає виноробень за цими фільтрами. Жодна виноробня в каталозі не відповідає обраному поєднанню. | повідомлення стану | продукт | Виправлено на кроці 03 — прибрано ярлик «Порожній стан:» |
-| `catalog.empty.broaden-filters` | catalog-empty | порожній стан: фільтри без результату | Спробувати ширші фільтри | кнопка | продукт | Виправлено на кроці 03 — канонічна назва зі «Словника» замінила мову flow-діаграми |
-| `catalog.error.message` | catalog-error | помилка: каталог недоступний | Помилка: каталог недоступний. Не вдалося завантажити список виноробень. | повідомлення стану | продукт | |
+| `catalog.list.col-name` | catalog | список карток виноробень | Name | підпис поля | продукт | |
+| `catalog.list.col-region` | catalog | список карток виноробень | Region | підпис поля | продукт | |
+| `catalog.list.col-specialty` | catalog | список карток виноробень | Specialty | підпис поля | продукт | |
+| `catalog.list.col-cert` | catalog | список карток виноробень | Certification | підпис поля | продукт | |
+| `catalog.list.row-conti-rosso` | catalog | список карток виноробень | Tenuta Conti Rosso — Toscana, Italia — still, red — DOCG | текст | зовнішні дані | Запис ВИНОРОБНІ — дані каталогу, не продуктовий текст |
+| `catalog.list.row-valliere` | catalog | список карток виноробень | Château Vallière — Bordeaux, France — still, red — AOC | текст | зовнішні дані | |
+| `catalog.list.row-masseria` | catalog | список карток виноробень | Masseria delle Rose — Puglia, Italia — still, rosé/white — DOC | текст | зовнішні дані | |
+| `catalog.list.row-hauterive` | catalog | список карток виноробень | Domaine Hauterive — Languedoc, France — sparkling — AOC | текст | зовнішні дані | |
+| `catalog.empty.cold-start` | catalog-empty | порожній стан: каталог ще порожній | No partners published in the catalog yet. | повідомлення стану | продукт | Виправлено на кроці 03 (прибрано «Порожній стан:» і гібрид); перекладено на кроці 08 |
+| `catalog.empty.cold-start-recovery` | catalog-empty | порожній стан: каталог ще порожній | Start the conversation | кнопка | продукт | Новий ключ, крок 04 — порожній стан не мав жодної дії в реальному тексті (лише глобальна навігація), порушувало правило voice.md, Мікрокопі → «Порожній стан» |
+| `catalog.empty.no-results` | catalog-empty | порожній стан: фільтри без результату | No wineries match these filters. None in the catalog fit this combination. | повідомлення стану | продукт | Виправлено на кроці 03 (прибрано ярлик); перекладено на кроці 08 |
+| `catalog.empty.broaden-filters` | catalog-empty | порожній стан: фільтри без результату | Try broader filters | кнопка | продукт | Виправлено на кроці 03 — канонічна назва зі «Словника» замінила мову flow-діаграми |
+| `catalog.error.message` | catalog-error | помилка: каталог недоступний | Error: the catalog is unavailable. The winery list failed to load. | повідомлення стану | продукт | |
 | `winery.profile.name` | winery | профіль ВИНОРОБНІ | Tenuta Conti Rosso | заголовок | зовнішні дані | Назва конкретної виноробні — порівняти з узагальненим «партнер» на `home.hero.title` і `catalog.empty.cold-start` |
-| `winery.profile.location` | winery | профіль ВИНОРОБНІ | Toscana, Italia — тихі, червоні | текст | зовнішні дані | |
-| `winery.wines.title` | winery | список ВИНО | Вина | заголовок | продукт | |
-| `winery.wines.col-variety` | winery | список ВИНО | Сорт винограду | підпис поля | продукт | |
-| `winery.wines.col-cert` | winery | список ВИНО | Сертифікат | підпис поля | продукт | |
+| `winery.profile.location` | winery | профіль ВИНОРОБНІ | Toscana, Italia — still, red | текст | зовнішні дані | |
+| `winery.wines.title` | winery | список ВИНО | Wines | заголовок | продукт | |
+| `winery.wines.col-variety` | winery | список ВИНО | Grape variety | підпис поля | продукт | |
+| `winery.wines.col-cert` | winery | список ВИНО | Certification | підпис поля | продукт | |
 | `winery.wines.row-sangiovese` | winery | список ВИНО | Sangiovese — DOCG | текст | зовнішні дані | |
 | `winery.wines.row-chianti` | winery | список ВИНО | Chianti Classico — DOCG Riserva | текст | зовнішні дані | |
 | `winery.wines.row-vermentino` | winery | список ВИНО | Vermentino — DOC | текст | зовнішні дані | |
-| `winery.testimonial.quote` | winery | named-відгук для цієї виноробні | «Познайомилися з власником Tenuta Conti Rosso на стенді VH Selection під час ProWein 2025 — за місяць уже узгоджували першу партію Chianti Classico.» | текст | зовнішні дані | |
+| `winery.testimonial.quote` | winery | named-відгук для цієї виноробні | "We met the owner of Tenuta Conti Rosso at the VH Selection stand during ProWein 2025 — within a month we were already finalizing our first shipment of Chianti Classico." | текст | зовнішні дані | |
 | `winery.testimonial.attribution` | winery | named-відгук для цієї виноробні | — Daqin Huang, Senior Buyer, Business France Wine Desk (ProWein 2025) | текст | зовнішні дані | |
-| `winery.decision.back-to-list` | winery | рішення: критерії й відгуки переконують? | Ще не впевнені? Повернутися до списку виноробень. | посилання | продукт | Виправлено на кроці 03 — третя особа («повертається») замінена на інфінітив, як і скрізь; тепер слово-в-слово збігається з `winery.error.back-to-list` |
-| `winery.error.message` | winery-error | помилка: картку не вдалось відкрити | Помилка: не вдалося завантажити деталі цієї виноробні. | повідомлення стану | продукт | Виправлено на кроці 03 — прибрано зайве перше речення, що повторювало заголовок зони, не додаючи факту |
-| `winery.error.back-to-list` | winery-error | помилка: картку не вдалось відкрити | повернутися до списку виноробень | посилання | продукт | Порівняти з `winery.decision.back-to-list` |
-| `winery.generic.title` | winery-error, winery-loading | заголовок екрана (конкретна виноробня ще/вже не відома) | Картка виноробні | заголовок | продукт | Новий ключ, крок 04 — рядок існував на екрані, не було ключа. Слово «виноробня» тут у значенні категорії/екрана (зі «Словника»), не ролі довіри |
+| `winery.decision.back-to-list` | winery | рішення: критерії й відгуки переконують? | Not convinced yet? Back to the winery list. | посилання | продукт | Виправлено на кроці 03 (третя особа → інфінітив, тепер збігається з `winery.error.back-to-list`); перекладено на кроці 08 |
+| `winery.error.message` | winery-error | помилка: картку не вдалось відкрити | Error: the winery details failed to load. | повідомлення стану | продукт | Виправлено на кроці 03 — прибрано зайве перше речення, що повторювало заголовок зони, не додаючи факту |
+| `winery.error.back-to-list` | winery-error | помилка: картку не вдалось відкрити | back to the winery list | посилання | продукт | Порівняти з `winery.decision.back-to-list` |
+| `winery.generic.title` | winery-error, winery-loading | заголовок екрана (конкретна виноробня ще/вже не відома) | Winery profile | заголовок | продукт | Новий ключ, крок 04 — рядок існував на екрані, не було ключа. Слово «виноробня» тут у значенні категорії/екрана (зі «Словника»), не ролі довіри; перекладено на кроці 08 |
 
 ## Підсумок позначок (друга частина завдання)
 
@@ -329,3 +335,29 @@ A1/B/C) і `sitemap.md` → «Стани» оновлено разом із HTML
 
 Жодного нового факту не додано — лише межі речень. Зовнішні дані й
 структуру не чіпала.
+
+## Крок 08 — переклад інтерфейсу на англійську
+
+За зауваженням користувача: усі вайрфрейми лишались українською, хоча
+`research.md`, ВИСНОВОК 6, ще раніше зафіксував, що сайт стартує
+англійською. Переклала весь реальний текст інтерфейсу (заголовки,
+кнопки, підписи полів, повідомлення станів, зовнішні описові слова на
+кшталт «тихі, червоні» → «still, red») у всіх 15 файлах — колонка
+«Рядок» у таблиці вище тепер відповідає живому HTML. `<html lang="uk">`
+→ `lang="en"`, `<title>` теж перекладено.
+
+**Що НЕ перекладено, свідомо:**
+- Власні назви й зовнішні дані без зміни значення: «Tenuta Conti
+  Rosso», «Château Vallière», «Giulia Conti», «giulia@contirosso.it»,
+  коди сертифікатів DOCG/DOC/AOC, сорти винограду (Sangiovese тощо).
+- `.zone-label`, `.zone-action`, навігатор станів, верхній HTML-
+  коментар кожного файлу — інструментарій курсу (voice.md, «Мова
+  продукту: англійська»), не текст продукту.
+- Увесь документаційний шар — цей файл (крім колонки «Рядок»),
+  `voice.md`, `sitemap.md`, `flows.md`, `personas.md`, `research.md`,
+  `CLAUDE.md` — лишається українською: це робочі матеріали курсу.
+
+`voice.md`, Словник — доповнено англійськими відповідниками для
+кожного терміна й назви дії (розділ «Мова продукту: англійська»),
+щоб переклад тримався того самого єдиного слова на всіх екранах, що
+й україномовна версія раніше.

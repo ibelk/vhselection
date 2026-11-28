@@ -19,13 +19,20 @@
   Виправлено після суворої критики: чекліст критеріїв і named-відгук
   тепер вкладені в article ВИНОРОБНІ (_conventions.md, розділ 4), не
   сусідні section під main.
+  Крок 08: текст інтерфейсу переписано англійською (research.md,
+  ВИСНОВОК 6 — сайт стартує англійською). Цей коментар, .zone-label,
+  .zone-action і навігатор станів — робочі матеріали курсу, лишаються
+  українською (voice.md, «Мова продукту: англійська»). Назва
+  виноробні, сорти винограду, сертифікати, ім'я й компанія у відгуку —
+  зовнішні дані, не перекладені; переклала лише описові слова
+  («тихі, червоні» → «still, red»).
 -->
 <!doctype html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Картка виноробні — VH Selection (вайрфрейм)</title>
+<title>Winery profile — VH Selection (wireframe)</title>
 <link rel="stylesheet" href="../_nav/nav.css">
 <link rel="stylesheet" href="_frame.css">
 </head>
@@ -38,9 +45,9 @@
 
     <nav class="global-nav" aria-label="Глобальна навігація">
       <ul>
-        <li><a href="home.html">Головний</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="contact.html">Контакт</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -62,8 +69,8 @@
       `aria-current`.</p>
 
       <header class="page-header">
-        <strong>VH Selection</strong> — консалтинг і маркетинг для
-        експорту вина
+        <strong>VH Selection</strong> — export consulting and
+        marketing for wine
       </header>
 
       <main>
@@ -72,13 +79,13 @@
           <span class="zone-label">Зона: профіль ВИНОРОБНІ
           (sitemap.md, сутність ВИНОРОБНЯ; job E1/S1 — jtbd.md)</span>
           <h1>Tenuta Conti Rosso</h1>
-          <p>Toscana, Italia — тихі, червоні</p>
+          <p>Toscana, Italia — still, red</p>
 
           <section aria-label="Список ВИНО">
-            <h2>Вина</h2>
+            <h2>Wines</h2>
             <table>
               <thead>
-                <tr><th>Сорт винограду</th><th>Сертифікат</th></tr>
+                <tr><th>Grape variety</th><th>Certification</th></tr>
               </thead>
               <tbody>
                 <tr><td>Sangiovese</td><td>DOCG</td></tr>
@@ -98,16 +105,16 @@
           ВИНОРОБНІ; job R2/E1/S1 — jtbd.md). Та сама сутність, той
           самий чекліст, що на Головному (home.html) — текст не
           переписано.</span>
-          <h2>Як ми відбираємо партнерів</h2>
+          <h2>How we select partners</h2>
           <table>
             <thead>
-              <tr><th>Критерій</th><th>Поріг</th></tr>
+              <tr><th>Criterion</th><th>Threshold</th></tr>
             </thead>
             <tbody>
-              <tr><td>Досвід активного експорту</td><td>від 3 років</td></tr>
-              <tr><td>Річний обсяг виробництва</td><td>50 000–500 000 пляшок</td></tr>
-              <tr><td>Сертифікація походження (DOC/DOCG/AOC або еквівалент)</td><td>обов'язкова</td></tr>
-              <tr><td>Особиста перевірка виноробні куратором VH Selection</td><td>до публікації в каталозі</td></tr>
+              <tr><td>Active export experience</td><td>3+ years</td></tr>
+              <tr><td>Annual production volume</td><td>50,000–500,000 bottles</td></tr>
+              <tr><td>Certification of origin (DOC/DOCG/AOC or equivalent)</td><td>required</td></tr>
+              <tr><td>Personal winery inspection by a VH Selection curator</td><td>before catalog listing</td></tr>
             </tbody>
           </table>
           <p class="zone-action">Головна дія зони: підтвердити R2
@@ -121,9 +128,10 @@
           вайрфрейму за форматом полів ВІДГУКУ з sitemap.md — не
           зібраний із ресерчу текст, як і відгук на home.html.</span>
           <blockquote>
-            «Познайомилися з власником Tenuta Conti Rosso на стенді
-            VH Selection під час ProWein 2025 — за місяць уже
-            узгоджували першу партію Chianti Classico.»
+            "We met the owner of Tenuta Conti Rosso at the VH
+            Selection stand during ProWein 2025 — within a month we
+            were already finalizing our first shipment of Chianti
+            Classico."
           </blockquote>
           <p>— Daqin Huang, Senior Buyer, Business France Wine Desk
           (ProWein 2025)</p>
@@ -139,15 +147,15 @@
           «Ця виноробня відповідає показаним критеріям?»)</span>
 
           <p>
-            <a class="action-btn" href="contact.html">Почати
-            розмову →</a>
+            <a class="action-btn" href="contact.html">Start the
+            conversation →</a>
           </p>
           <p class="zone-action">Так, переконують — головна дія
           зони: перехід на Контактну форму (flows.md, Flow 2, вузол
           `N` → `Q`; Flow 3, вузол `J` → `M`).</p>
 
-          <p>Ще не впевнені? <a href="catalog.html">Повернутися до
-          списку виноробень</a>.</p>
+          <p>Not convinced yet? <a href="catalog.html">Back to the
+          winery list</a>.</p>
           <p class="zone-action">Вихід «назад до списку» — flows.md,
           Flow 2, вузол `O` (`Так` → `L`) / Flow 3, вузол `K` (`Так`
           → `H`). Якщо не повертається до списку, flows.md документує
@@ -161,9 +169,8 @@
 
       <footer class="site-footer">
         <span class="zone-label">Підвал</span>
-        VH Selection — міжнародна консалтингова та маркетингова
-        компанія для бутикових виноробень і виробників вина середнього
-        масштабу.
+        VH Selection is an international consulting and marketing
+        company for boutique wineries and mid-scale wine producers.
       </footer>
 
     </div>

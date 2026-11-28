@@ -16,13 +16,17 @@
   Базова сторінка — home.html. Інші стани — home-empty.html,
   home-loading.html. Стану «успіх» немає (sitemap.md → «Стани»:
   Головний не екран дії).
+  Крок 08: текст інтерфейсу переписано англійською (research.md,
+  ВИСНОВОК 6 — сайт стартує англійською). Цей коментар, .zone-label,
+  .zone-action і навігатор станів — робочі матеріали курсу, лишаються
+  українською (voice.md, «Мова продукту: англійська»).
 -->
 <!doctype html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Головний — помилка — VH Selection (вайрфрейм)</title>
+<title>Home — error — VH Selection (wireframe)</title>
 <link rel="stylesheet" href="../_nav/nav.css">
 <link rel="stylesheet" href="_frame.css">
 </head>
@@ -35,9 +39,9 @@
 
     <nav class="global-nav" aria-label="Глобальна навігація">
       <ul>
-        <li><a href="home.html" aria-current="page">Головний</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="contact.html">Контакт</a></li>
+        <li><a href="home.html" aria-current="page">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -55,8 +59,8 @@
       </nav>
 
       <header class="page-header">
-        <strong>VH Selection</strong> — консалтинг і маркетинг для
-        експорту вина
+        <strong>VH Selection</strong> — export consulting and
+        marketing for wine
       </header>
 
       <main>
@@ -66,18 +70,16 @@
           помилка (sitemap.md → «Екрани»; flows.md, Flow 3, вузол C,
           переглянуто — стосується всієї сторінки, не окремого
           блоку)</span>
-          <p><strong>Помилка:</strong> не вдалося завантажити
-          сторінку.</p>
+          <p><strong>Error:</strong> the page failed to load.</p>
           <p>
-            <a class="action-btn" href="home-loading.html">Спробувати
-            ще раз</a>
+            <a class="action-btn" href="home-loading.html">Try
+            again</a>
           </p>
           <p class="zone-action">Якщо проблема повторюється — <a
-          href="contact.html">напишіть нам через контактну форму</a>.
-          Вихід «спробувати ще» — flows.md, Flow 3, вузол `C1`;
-          звернення по допомогу flows.md не документує (там це
-          задокументований тупик `D`), додано, щоб не лишати сторінку
-          без виходу.</p>
+          href="contact.html">contact us through the form</a>. Вихід
+          «спробувати ще» — flows.md, Flow 3, вузол `C1`; звернення по
+          допомогу flows.md не документує (там це задокументований
+          тупик `D`), додано, щоб не лишати сторінку без виходу.</p>
         </section>
 
       </main>
@@ -89,9 +91,9 @@
         ресерч не підтверджує, посилання — заглушки). Футер —
         постійна частина каркаса сторінки, не вміст, що завантажується
         (як і шапка й навігація), тому лишається видимим.</span>
-        <p>VH Selection — міжнародна консалтингова та маркетингова
-        компанія для бутикових виноробень і виробників вина середнього
-        масштабу.</p>
+        <p>VH Selection is an international consulting and marketing
+        company for boutique wineries and mid-scale wine
+        producers.</p>
         <nav aria-label="Соцмережі">
           <ul>
             <li><a href="#">Facebook</a></li>

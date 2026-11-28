@@ -12,13 +12,17 @@
   випадки: невалідні поля, вузол H; сервіс недоступний, вузол K),
   contact-loading.html (вузол I), contact-success.html (вузол N —
   екран дії, має успіх).
+  Крок 08: текст інтерфейсу переписано англійською (research.md,
+  ВИСНОВОК 6 — сайт стартує англійською). Цей коментар, .zone-label,
+  .zone-action і навігатор станів — робочі матеріали курсу, лишаються
+  українською (voice.md, «Мова продукту: англійська»).
 -->
 <!doctype html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Контактна форма — VH Selection (вайрфрейм)</title>
+<title>Contact form — VH Selection (wireframe)</title>
 <link rel="stylesheet" href="../_nav/nav.css">
 <link rel="stylesheet" href="_frame.css">
 </head>
@@ -31,9 +35,9 @@
 
     <nav class="global-nav" aria-label="Глобальна навігація">
       <ul>
-        <li><a href="home.html">Головний</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="contact.html" aria-current="page">Контакт</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
 
@@ -51,8 +55,8 @@
       </nav>
 
       <header class="page-header">
-        <strong>VH Selection</strong> — консалтинг і маркетинг для
-        експорту вина
+        <strong>VH Selection</strong> — export consulting and
+        marketing for wine
       </header>
 
       <main>
@@ -61,29 +65,29 @@
           <span class="zone-label">Зона: контактна форма (sitemap.md,
           сутність ЗАЯВКА; flows.md, Flow 1, вузол F; job R4 —
           jtbd.md)</span>
-          <h1>Почати розмову</h1>
-          <p>Розкажіть, хто ви і що шукаєте. Ми відповімо релевантно
-          саме вашій ситуації.</p>
+          <h1>Start the conversation</h1>
+          <p>Tell us who you are and what you're looking for. We'll
+          reply in a way that's relevant to your situation.</p>
 
           <form>
-            <label for="f-role">Я є</label>
+            <label for="f-role">I am a</label>
             <select id="f-role" name="role" required>
-              <option value="" selected>Оберіть роль</option>
-              <option value="winery">Виноробнею</option>
-              <option value="importer">Імпортером / дистриб'ютором</option>
-              <option value="other">Інше</option>
+              <option value="" selected>Choose a role</option>
+              <option value="winery">Winery</option>
+              <option value="importer">Importer / distributor</option>
+              <option value="other">Other</option>
             </select>
 
-            <label for="f-name">Ім'я</label>
+            <label for="f-name">Name</label>
             <input id="f-name" name="name" type="text" required>
 
             <label for="f-email">Email</label>
             <input id="f-email" name="email" type="email" required>
 
-            <label for="f-message">Повідомлення</label>
+            <label for="f-message">Message</label>
             <textarea id="f-message" name="message" rows="5" required></textarea>
 
-            <a class="action-btn" href="contact-loading.html">Надіслати заявку</a>
+            <a class="action-btn" href="contact-loading.html">Submit application</a>
           </form>
 
           <p class="zone-action">Головна дія зони: надіслати заявку —
@@ -95,9 +99,8 @@
 
       <footer class="site-footer">
         <span class="zone-label">Підвал</span>
-        VH Selection — міжнародна консалтингова та маркетингова
-        компанія для бутикових виноробень і виробників вина середнього
-        масштабу.
+        VH Selection is an international consulting and marketing
+        company for boutique wineries and mid-scale wine producers.
       </footer>
 
     </div>

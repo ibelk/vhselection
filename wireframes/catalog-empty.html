@@ -17,13 +17,17 @@
      знайшовши») — сторінки немає, чесно позначено прозою.
   Базова сторінка — catalog.html. Інші стани — catalog-error.html,
   catalog-loading.html. Успіх — «—» (sitemap.md → «Стани»).
+  Крок 08: текст інтерфейсу переписано англійською (research.md,
+  ВИСНОВОК 6 — сайт стартує англійською). Цей коментар, .zone-label,
+  .zone-action і навігатор станів — робочі матеріали курсу, лишаються
+  українською (voice.md, «Мова продукту: англійська»).
 -->
 <!doctype html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Список виноробень — порожній — VH Selection (вайрфрейм)</title>
+<title>Winery list — empty — VH Selection (wireframe)</title>
 <link rel="stylesheet" href="../_nav/nav.css">
 <link rel="stylesheet" href="_frame.css">
 </head>
@@ -36,9 +40,9 @@
 
     <nav class="global-nav" aria-label="Глобальна навігація">
       <ul>
-        <li><a href="home.html">Головний</a></li>
-        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
-        <li><a href="contact.html">Контакт</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="catalog.html" aria-current="page">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -56,8 +60,8 @@
       </nav>
 
       <header class="page-header">
-        <strong>VH Selection</strong> — консалтинг і маркетинг для
-        експорту вина
+        <strong>VH Selection</strong> — export consulting and
+        marketing for wine
       </header>
 
       <main>
@@ -65,11 +69,11 @@
         <section id="cold-start" class="zone" aria-label="Порожній стан: каталог ще порожній">
           <span class="zone-label">Зона: каталог ще порожній
           (flows.md, Flow 2, вузол D2; sitemap.md → «Стани»)</span>
-          <h1>Список виноробень</h1>
-          <p>Ще жодного партнера не опубліковано в каталозі.</p>
+          <h1>Winery list</h1>
+          <p>No partners published in the catalog yet.</p>
           <p>
-            <a class="action-btn" href="contact.html">Почати
-            розмову</a>
+            <a class="action-btn" href="contact.html">Start the
+            conversation</a>
           </p>
           <p class="zone-action">Вихід: flows.md (Flow 2, вузол `D2`
           → `D3`) документує це як тупик у межах цього конкретного
@@ -87,25 +91,25 @@
 
           <aside aria-label="Поточний вибір фільтрів">
           <form>
-            <label for="f-region">Регіон / країна походження</label>
+            <label for="f-region">Region / country of origin</label>
             <select id="f-region" name="region">
-              <option value="" selected>Будь-який регіон</option>
+              <option value="" selected>Any region</option>
               <option value="toscana">Toscana, Italia</option>
               <option value="bordeaux">Bordeaux, France</option>
               <option value="puglia" selected>Puglia, Italia</option>
               <option value="languedoc">Languedoc, France</option>
             </select>
 
-            <label for="f-variety">Сорт / спеціалізація</label>
+            <label for="f-variety">Variety / specialty</label>
             <select id="f-variety" name="variety">
-              <option value="" selected>Будь-яка спеціалізація</option>
-              <option value="still-red">Тихі, червоні</option>
-              <option value="still-white-rose">Тихі, рожеві/білі</option>
-              <option value="sparkling" selected>Ігристі</option>
+              <option value="" selected>Any specialty</option>
+              <option value="still-red">Still, red</option>
+              <option value="still-white-rose">Still, rosé/white</option>
+              <option value="sparkling" selected>Sparkling</option>
             </select>
 
             <fieldset>
-              <legend>Сертифікати</legend>
+              <legend>Certifications</legend>
               <label><input type="checkbox" name="cert" value="docg" checked> DOCG</label>
               <label><input type="checkbox" name="cert" value="doc"> DOC</label>
               <label><input type="checkbox" name="cert" value="aoc"> AOC</label>
@@ -113,11 +117,11 @@
           </form>
           </aside>
 
-          <p>Немає виноробень за цими фільтрами. Жодна виноробня в
-          каталозі не відповідає обраному поєднанню.</p>
+          <p>No wineries match these filters. None in the catalog fit
+          this combination.</p>
           <p>
-            <a class="action-btn" href="catalog.html">Спробувати
-            ширші фільтри</a>
+            <a class="action-btn" href="catalog.html">Try broader
+            filters</a>
           </p>
           <p class="zone-action">Вихід «ширші фільтри» — flows.md,
           Flow 2, вузол `J` (`Так` → `G`), веде назад на базову
@@ -131,9 +135,8 @@
 
       <footer class="site-footer">
         <span class="zone-label">Підвал</span>
-        VH Selection — міжнародна консалтингова та маркетингова
-        компанія для бутикових виноробень і виробників вина середнього
-        масштабу.
+        VH Selection is an international consulting and marketing
+        company for boutique wineries and mid-scale wine producers.
       </footer>
 
     </div>

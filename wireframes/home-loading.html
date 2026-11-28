@@ -10,13 +10,17 @@
   Базова сторінка — home.html. Інші стани — home-empty.html,
   home-error.html. Стану «успіх» немає (sitemap.md → «Стани»: Головний
   не екран дії).
+  Крок 08: текст інтерфейсу переписано англійською (research.md,
+  ВИСНОВОК 6 — сайт стартує англійською). Цей коментар, .zone-label,
+  .zone-action і навігатор станів — робочі матеріали курсу, лишаються
+  українською (voice.md, «Мова продукту: англійська»).
 -->
 <!doctype html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Головний — завантаження — VH Selection (вайрфрейм)</title>
+<title>Home — loading — VH Selection (wireframe)</title>
 <link rel="stylesheet" href="../_nav/nav.css">
 <link rel="stylesheet" href="_frame.css">
 </head>
@@ -29,9 +33,9 @@
 
     <nav class="global-nav" aria-label="Глобальна навігація">
       <ul>
-        <li><a href="home.html" aria-current="page">Головний</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="contact.html">Контакт</a></li>
+        <li><a href="home.html" aria-current="page">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -49,8 +53,8 @@
       </nav>
 
       <header class="page-header">
-        <strong>VH Selection</strong> — консалтинг і маркетинг для
-        експорту вина
+        <strong>VH Selection</strong> — export consulting and
+        marketing for wine
       </header>
 
       <main>
@@ -60,7 +64,7 @@
           завантаження (sitemap.md → «Екрани»; flows.md, Flow 3, вузол
           A1, переглянуто — стосується всієї сторінки, не окремого
           блоку)</span>
-          <p>Завантаження…</p>
+          <p>Loading…</p>
           <div class="skeleton-line" aria-hidden="true"></div>
           <div class="skeleton-line" aria-hidden="true"></div>
           <div class="skeleton-line short" aria-hidden="true"></div>
@@ -84,9 +88,9 @@
         ресерч не підтверджує, посилання — заглушки). Футер —
         постійна частина каркаса сторінки, не вміст, що завантажується
         (як і шапка й навігація), тому лишається видимим.</span>
-        <p>VH Selection — міжнародна консалтингова та маркетингова
-        компанія для бутикових виноробень і виробників вина середнього
-        масштабу.</p>
+        <p>VH Selection is an international consulting and marketing
+        company for boutique wineries and mid-scale wine
+        producers.</p>
         <nav aria-label="Соцмережі">
           <ul>
             <li><a href="#">Facebook</a></li>

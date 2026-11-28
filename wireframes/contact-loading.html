@@ -8,13 +8,18 @@
   Базова сторінка — contact.html. Інші стани — contact-error.html,
   contact-success.html. Порожнього стану немає (sitemap.md → «Стани»:
   «—»).
+  Крок 08: текст інтерфейсу переписано англійською (research.md,
+  ВИСНОВОК 6 — сайт стартує англійською). Цей коментар, .zone-label,
+  .zone-action і навігатор станів — робочі матеріали курсу, лишаються
+  українською (voice.md, «Мова продукту: англійська»). Giulia
+  Conti/giulia@contirosso.it — зразкові дані заявки, не перекладаємо.
 -->
 <!doctype html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Контактна форма — завантаження — VH Selection (вайрфрейм)</title>
+<title>Contact form — loading — VH Selection (wireframe)</title>
 <link rel="stylesheet" href="../_nav/nav.css">
 <link rel="stylesheet" href="_frame.css">
 </head>
@@ -27,9 +32,9 @@
 
     <nav class="global-nav" aria-label="Глобальна навігація">
       <ul>
-        <li><a href="home.html">Головний</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="contact.html" aria-current="page">Контакт</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
 
@@ -47,8 +52,8 @@
       </nav>
 
       <header class="page-header">
-        <strong>VH Selection</strong> — консалтинг і маркетинг для
-        експорту вина
+        <strong>VH Selection</strong> — export consulting and
+        marketing for wine
       </header>
 
       <main>
@@ -56,24 +61,24 @@
         <section class="zone" aria-label="Контактна форма — завантаження">
           <span class="zone-label">Зона: контактна форма, завантаження
           (flows.md, Flow 1, вузол I)</span>
-          <h1>Почати розмову</h1>
+          <h1>Start the conversation</h1>
 
           <form>
-            <label for="f-role">Я є</label>
+            <label for="f-role">I am a</label>
             <select id="f-role" name="role" disabled>
-              <option selected>Виноробнею</option>
+              <option selected>Winery</option>
             </select>
 
-            <label for="f-name">Ім'я</label>
+            <label for="f-name">Name</label>
             <input id="f-name" type="text" disabled value="Giulia Conti">
 
             <label for="f-email">Email</label>
             <input id="f-email" type="email" disabled value="giulia@contirosso.it">
 
-            <label for="f-message">Повідомлення</label>
-            <textarea id="f-message" rows="5" disabled>Шукаємо імпортера у Скандинавії для нашого ігристого асортименту.</textarea>
+            <label for="f-message">Message</label>
+            <textarea id="f-message" rows="5" disabled>Looking for an importer in Scandinavia for our sparkling wine range.</textarea>
 
-            <button type="submit" disabled>Надсилання…</button>
+            <button type="submit" disabled>Submitting…</button>
           </form>
 
           <p class="zone-action">Завантаження: заявка надсилається.
@@ -91,9 +96,8 @@
 
       <footer class="site-footer">
         <span class="zone-label">Підвал</span>
-        VH Selection — міжнародна консалтингова та маркетингова
-        компанія для бутикових виноробень і виробників вина середнього
-        масштабу.
+        VH Selection is an international consulting and marketing
+        company for boutique wineries and mid-scale wine producers.
       </footer>
 
     </div>
